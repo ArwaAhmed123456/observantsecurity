@@ -22,6 +22,16 @@ function AboutUs() {
         </div>
       </div>
 
+      {/* Company Background Section */}
+      <section className="about-section">
+        <div className="section-content">
+          <h2>Our Story</h2>
+          <p>
+            Observant Security Solution was formed in 2000 in response to the need for a security company with a service-driven approach. Since then, the growth of Observant and its client base has been developed due to excellent service delivery and referral. We have built our reputation on delivering exceptional service and genuine care for our clients' safety and security.
+          </p>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="about-section">
         <div className="section-content">
