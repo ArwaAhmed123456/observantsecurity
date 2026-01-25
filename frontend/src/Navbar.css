@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    height: 80px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #1B2631;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links a.active {
+    color: #D4AF37;
+}
+
+.cta-button {
+    background: #D4AF37;
+    color: #1B2631;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.cta-button:hover {
+    background: #F39C12;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 2.5px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 15px;
+        height: 70px;
+    }
+
+    .logo img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #1B2631;
+        z-index: 10;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 15px 20px;
+        border-bottom: 1px solid #333;
+    }
+
+    .cta-button {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-shrink: 0;
+    }
+}
