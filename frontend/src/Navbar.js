@@ -30,7 +30,8 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="logo">
-                <img src="/logo.png" alt="Observant Services" />
+                <img src="/logo.png" alt="Observant Security" />
+                <span className="company-name">Observant Security</span>
             </div>
             <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
                 <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>

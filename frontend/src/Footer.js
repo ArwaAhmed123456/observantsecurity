@@ -6,11 +6,9 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
-        <div className="footer-section">
-          <h3>Contact Info</h3>
-          <p>📞 <a href="tel:+447446084868">+44 7446 084868</a></p>
-          <p>📧 <a href="mailto:abid.fiaz@observantsecurity.co.uk">abid.fiaz@observantsecurity.co.uk</a></p>
-          <p>📍 A9 ParkLane Castle Vale<br />Birmingham</p>
+        <div className="footer-section footer-about">
+          <h3>About</h3>
+          <p>Observant Security Solution was formed in 2000 in response to the need for a security company with a service-driven approach. We provide professional security solutions nationwide.</p>
         </div>
         <div className="footer-section footer-services">
           <h3>Services</h3>
@@ -24,7 +22,7 @@ const Footer = () => {
             <ul>
               <li><Link to="/service/4">Event Security</Link></li>
               <li><Link to="/service/5">Mobile Security</Link></li>
-              <li><Link to="/service/6">Warehouses Security</Link></li>
+              <li><Link to="/service/6\">Warehouses Security</Link></li>
               <li><Link to="/service/7">Solar Farm Security</Link></li>
             </ul>
           </div>
@@ -40,9 +38,11 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="footer-section">
-          <h3>About</h3>
-          <p>Observant Security Solution was formed in 2000 in response to the need for a security company with a service-driven approach. We provide professional security solutions nationwide.</p>
+        <div className="footer-section footer-contact">
+          <h3>Contact Info</h3>
+          <p>📞 <a href="tel:+447446084868">+44 7446 084868</a></p>
+          <p>📧 <a href="mailto:abid.fiaz@observantsecurity.co.uk">abid.fiaz@observantsecurity.co.uk</a></p>
+          <p>📍 A9 ParkLane Castle Vale<br />Birmingham</p>
         </div>
       </div>
       <div className="copyright-bar">

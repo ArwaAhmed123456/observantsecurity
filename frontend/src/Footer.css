@@ -27,9 +27,23 @@ footer {
   text-align: left;
 }
 
+/* About section - left alignment */
+.footer-about {
+  text-align: left;
+}
+
 /* Services section - center alignment with 2 columns */
 .footer-services {
   text-align: center;
+}
+
+.footer-services h3 {
+  text-align: center;
+}
+
+/* Contact section - right alignment */
+.footer-contact {
+  text-align: left;
 }
 
 .services-columns {
@@ -43,10 +57,14 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: flex-start;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.services-columns ul li a {
+  text-align: center;
 }
 
 .footer-section {
