@@ -11,7 +11,7 @@ footer {
   background-color: #1B2631;
   color: #FFFFFF;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 60px;
   padding: 60px 40px;
   width: 100%;
@@ -25,6 +25,11 @@ footer {
 /* All footer sections - Left alignment */
 .footer-container .footer-section {
   text-align: left;
+}
+
+/* Services section - center alignment for lists and social links */
+.footer-container .footer-section:nth-child(1) {
+  text-align: center;
 }
 
 .footer-section {
@@ -65,9 +70,10 @@ footer {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
 
 .footer-section ul li {
@@ -88,14 +94,14 @@ footer {
   padding-left: 5px;
 }
 
-/* Social links alignment - all left aligned now */
+/* Social links - centered in Services section */
 .footer-section .social-links {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 25px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .footer-section .social-links a {
