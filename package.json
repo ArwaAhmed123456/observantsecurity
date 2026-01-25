@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build --prefix frontend"
+    "build": "npm run build --prefix frontend",
+    "postinstall": "npm install --prefix frontend",
+    "vercel-build": "sh vercel-build.sh"
   },
   "keywords": [],
   "author": "",
