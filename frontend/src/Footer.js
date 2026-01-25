@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright-bar">
-        <p>&copy; {new Date().getFullYear()} Observant Security. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p>&copy; {new Date().getFullYear()} Observant Security. All Rights Reserved. | <button className="link-button">Privacy Policy</button> | <button className="link-button">Terms of Service</button></p>
         <div className="accreditation-logos">
           {/* Placeholder for accreditation logos */}
           <img src="/logo.png" alt="SIA Accredited" />
