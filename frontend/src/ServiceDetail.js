@@ -19,6 +19,8 @@ function ServiceDetail() {
 
   return (
     <div className="service-detail">
+      <button onClick={() => navigate(-1)} className="back-button-top">← Back</button>
+      
       <div className="service-hero" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + service.image})` }}>
         <div className="overlay"></div>
         <div className="hero-text">
