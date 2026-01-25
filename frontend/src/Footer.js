@@ -7,17 +7,27 @@ const Footer = () => {
     <footer>
       <div className="footer-container">
         <div className="footer-section">
+          <h3>Contact Info</h3>
+          <p>📞 <a href="tel:+447446084868">+44 7446 084868</a></p>
+          <p>📧 <a href="mailto:abid.fiaz@observantsecurity.co.uk">abid.fiaz@observantsecurity.co.uk</a></p>
+          <p>📍 A9 ParkLane Castle Vale<br />Birmingham</p>
+        </div>
+        <div className="footer-section footer-services">
           <h3>Services</h3>
-          <ul>
-            <li><Link to="/service/0">CCTV Security</Link></li>
-            <li><Link to="/service/1">Residential Security</Link></li>
-            <li><Link to="/service/2">Construction Security</Link></li>
-            <li><Link to="/service/3">Corporate Security</Link></li>
-            <li><Link to="/service/4">Event Security</Link></li>
-            <li><Link to="/service/5">Mobile Security</Link></li>
-            <li><Link to="/service/6">Warehouses Security</Link></li>
-            <li><Link to="/service/7">Solar Farm Security</Link></li>
-          </ul>
+          <div className="services-columns">
+            <ul>
+              <li><Link to="/service/0">CCTV Security</Link></li>
+              <li><Link to="/service/1">Residential Security</Link></li>
+              <li><Link to="/service/2">Construction Security</Link></li>
+              <li><Link to="/service/3">Corporate Security</Link></li>
+            </ul>
+            <ul>
+              <li><Link to="/service/4">Event Security</Link></li>
+              <li><Link to="/service/5">Mobile Security</Link></li>
+              <li><Link to="/service/6">Warehouses Security</Link></li>
+              <li><Link to="/service/7">Solar Farm Security</Link></li>
+            </ul>
+          </div>
           <div className="social-links">
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
               <img src="/linkedin-logo.webp" alt="LinkedIn" className="social-icon-img" />
@@ -29,12 +39,6 @@ const Footer = () => {
               <img src="/insta_logo.png" alt="Instagram" className="social-icon-img" />
             </a>
           </div>
-        </div>
-        <div className="footer-section">
-          <h3>Contact Info</h3>
-          <p>📞 <a href="tel:+447446084868">+44 7446 084868</a></p>
-          <p>📧 <a href="mailto:abid.fiaz@observantsecurity.co.uk">abid.fiaz@observantsecurity.co.uk</a></p>
-          <p>📍 A9 ParkLane Castle Vale<br />Birmingham</p>
         </div>
         <div className="footer-section">
           <h3>About</h3>

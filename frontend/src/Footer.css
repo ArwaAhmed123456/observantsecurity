@@ -27,9 +27,26 @@ footer {
   text-align: left;
 }
 
-/* Services section - center alignment for lists and social links */
-.footer-container .footer-section:nth-child(1) {
+/* Services section - center alignment with 2 columns */
+.footer-services {
   text-align: center;
+}
+
+.services-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.services-columns ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .footer-section {
@@ -73,7 +90,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
 }
 
 .footer-section ul li {
