@@ -1,15 +1,16 @@
 {
   "outputDirectory": "frontend/build",
+  "trailingSlash": false,
   "routes": [
     {
-      "src": "/static/(.*)",
+      "src": "^/static/(.*)$",
       "dest": "/static/$1",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
       }
     },
     {
-      "src": "/(.*)",
+      "src": "^/(?!.*\\.).*$",
       "dest": "/index.html"
     }
   ]
