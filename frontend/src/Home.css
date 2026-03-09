@@ -1,4 +1,6 @@
-/* Hero Section */
+/* ===========================
+   HERO SECTION
+   =========================== */
 .hero {
   position: relative;
   width: 100%;
@@ -21,142 +23,613 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.65);
+  background: linear-gradient(135deg, rgba(27, 38, 49, 0.85) 0%, rgba(212, 175, 55, 0.15) 100%);
 }
 
 .content {
   position: relative;
   z-index: 1;
   padding: 20px;
+  max-width: 900px;
 }
 
 .content h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .content h2 {
-  font-size: 1.8em;
-  margin-bottom: 5px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  font-size: 1.6em;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .highlight {
   color: #D4AF37;
+  font-weight: 600;
 }
 
 .content p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-  line-height: 1.6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  font-size: 1.15em;
+  margin-bottom: 35px;
+  line-height: 1.7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .buttons .btn {
-  padding: 12px 30px;
+  padding: 15px 35px;
   margin: 0;
   font-size: 1em;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .buttons .primary {
   background-color: #D4AF37;
   color: #1B2631;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.buttons .primary:hover {
+  background-color: #F39C12;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
 }
 
 .buttons .secondary {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.05);
   border: 2px solid white;
   color: white;
+  backdrop-filter: blur(5px);
 }
 
-.buttons .btn:hover {
-  opacity: 0.85;
+.buttons .secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
 
-.about-section {
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 80px 20px;
+/* ===========================
+   COMMON SECTION STYLES
+   =========================== */
+.section-container {
+  max-width: 1200px;
+  /* Reverted to 1200px */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
   text-align: center;
-  margin: 0;
+  margin-bottom: 60px;
+}
+
+.section-tag {
+  color: #D4AF37;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #1B2631;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===========================
+   ABOUT SECTION
+   =========================== */
+.about-section {
+  background-color: #f9f9f9;
+  padding: 80px 0;
   width: 100%;
 }
 
-.about-title {
-  color: #D4AF37;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.about-heading {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  margin: 0 auto 30px;
-  max-width: 800px;
-  color: #1B2631;
+.about-section .section-container {
+  max-width: 100%;
+  padding: 0 60px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
 }
+
+@media (max-width: 992px) {
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .about-card {
   background-color: white;
-  color: #333;
-  border-radius: 12px;
-  max-width: 300px;
-  flex: 1;
-  min-width: 260px;
-  transition: transform 0.3s ease;
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
 .about-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.card-title {
-  font-size: 1.4rem;
+.card-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon img {
+  max-width: 160px;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  color: #1B2631;
   margin-bottom: 15px;
-  color: #D4AF37;
+  font-weight: 700;
 }
 
 .about-card p {
   font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+  color: #666;
+  line-height: 1.7;
 }
 
-.about-section .get-service {
-  background-color: #D4AF37;
+/* ===========================
+   SERVICES SHOWCASE
+   =========================== */
+.services-showcase {
+  background-color: white;
+  padding: 80px 20px;
+}
+
+.services-showcase .section-header h2 {
   color: #1B2631;
-  padding: 12px 30px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Balance 7 items by centering the last one */
+.services-grid .service-card:nth-child(7) {
+  grid-column: 2;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid .service-card:nth-child(7) {
+    grid-column: span 2;
+    max-width: 450px;
+    justify-self: center;
+  }
+}
+
+
+.service-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.1);
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.service-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-content h3 {
+  font-size: 1.4rem;
+  color: #1B2631;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.service-content p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.service-arrow {
+  color: #D4AF37;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-arrow {
+  transform: translateX(5px);
+  display: inline-block;
+}
+
+.view-all-services {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===========================
+   WHY CHOOSE US
+   =========================== */
+.why-choose-us {
+  background: linear-gradient(135deg, #1B2631 0%, #2C3E50 100%);
+  padding: 100px 20px;
+  color: white;
+}
+
+.why-choose-us .section-tag {
+  color: #D4AF37;
+}
+
+.why-choose-us .section-header h2 {
+  color: white;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  max-width: 130px;
+  max-height: 130px;
+  object-fit: contain;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: #D4AF37;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* ===========================
+   STATISTICS SECTION
+   =========================== */
+.statistics-section {
+  background-color: #D4AF37;
+  padding: 60px 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.stat-card {
+  text-align: center;
+  color: #1B2631;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1B2631;
+}
+
+.stat-label {
   font-size: 1.1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2C3E50;
+}
+
+/* ===========================
+   INDUSTRIES SECTION
+   =========================== */
+.industries-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.industry-card {
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.industry-card:hover {
+  border-color: #D4AF37;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.industry-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.industry-icon img {
+  max-width: 110px;
+  max-height: 110px;
+  object-fit: contain;
+}
+
+.industry-card h3 {
+  font-size: 1.2rem;
+  color: #1B2631;
   font-weight: 600;
 }
 
-.about-section .get-service:hover {
-  background-color: #F39C12;
+/* ===========================
+   CALL TO ACTION
+   =========================== */
+.cta-section {
+  background: linear-gradient(135deg, #1B2631 0%, #2C3E50 100%);
+  padding: 100px 20px;
+  color: white;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn.large {
+  padding: 18px 45px;
+  font-size: 1.1rem;
+}
+
+.btn.secondary.large {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn.secondary.large:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2.2em;
+  }
+
+  .content h2 {
+    font-size: 1.3em;
+  }
+
+  .content p {
+    font-size: 1em;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .about-section,
+  .services-showcase,
+  .why-choose-us,
+  .industries-section,
+  .cta-section {
+    padding: 50px 20px;
+  }
+
+  .statistics-section {
+    padding: 50px 20px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn.large {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.8em;
+  }
+
+  .buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-cards,
+  .features-grid,
+  .industries-grid {
+    gap: 20px;
+  }
 }

@@ -17,6 +17,26 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.nav-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
 .navbar.scrolled {
     background-color: #1B2631;
     backdrop-filter: blur(10px);
@@ -25,9 +45,10 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-right: 15px;
+    gap: 10px;
     flex-shrink: 0;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .logo img {
@@ -36,17 +57,37 @@ body {
     object-fit: contain;
 }
 
-.company-name {
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0.9;
+    /* Tight for official look */
+}
+
+.brand-top {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.brand-bottom {
     color: #D4AF37;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: -2px;
+    /* Pull closer to 'Observant' */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
     gap: 20px;
@@ -69,6 +110,46 @@ body {
 .nav-links li a:hover,
 .nav-links a.active {
     color: #D4AF37;
+}
+
+.nav-auth-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-auth-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-auth-links li a:hover,
+.nav-auth-links a.active {
+    color: #D4AF37;
+}
+
+.nav-auth-links li a.nav-register-btn {
+    border: 1px solid #D4AF37;
+    padding: 6px 15px;
+    border-radius: 4px;
+    color: #D4AF37;
+    transition: all 0.3s ease;
+}
+
+.nav-auth-links li a.nav-register-btn:hover,
+.nav-auth-links li a.nav-register-btn.active {
+    background-color: #D4AF37;
+    color: #1B2631;
+}
+
+.mobile-only-auth {
+    display: none;
 }
 
 .cta-button {
@@ -142,6 +223,16 @@ body {
         border-bottom: 1px solid #333;
     }
 
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only-auth {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
     .cta-button {
         display: none;
     }
@@ -149,5 +240,41 @@ body {
     .hamburger {
         display: flex;
         flex-shrink: 0;
+    }
+}
+
+/* Add to existing Navbar.css */
+.nav-btn-link {
+    background: none;
+    border: none;
+    color: #fff;
+    /* Changed to white to match other links */
+    font-size: 0.95rem;
+    /* Match other links */
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+    text-transform: none;
+    /* Reset if inherited */
+}
+
+.nav-btn-link:hover {
+    color: #D4AF37;
+    /* Match active color */
+}
+
+/* Ensure mobile menu styles apply to button too */
+@media (max-width: 768px) {
+    .nav-btn-link {
+        color: white;
+        font-size: 1.5rem;
+        /* Match mobile links */
+        margin: 0;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #333;
+        display: block;
     }
 }
