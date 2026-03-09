@@ -4,6 +4,7 @@ services:
     name: observant-backend
     env: node
     rootDir: backend
+    plan: free # Force the free tier
     buildCommand: npm install
     startCommand: node server.js
     envVars:
