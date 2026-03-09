@@ -1,0 +1,33 @@
+services:
+  # The Backend Node Server
+  - type: web
+    name: observant-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false # Render will ask you to provide this
+      - key: JWT_SECRET
+        generateValue: true
+
+  # The Frontend React Application
+  - type: web
+    name: observant-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
+    envVars:
+      - key: REACT_APP_API_URL
+        fromService:
+          type: web
+          name: observant-backend
+          envVarKey: RENDER_EXTERNAL_URL
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
