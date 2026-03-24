@@ -54,7 +54,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="social-links-centered">
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/observant-security-ltd/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <img src="/linkedin.png" alt="LinkedIn" className="social-icon-img" />
           </a>
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
