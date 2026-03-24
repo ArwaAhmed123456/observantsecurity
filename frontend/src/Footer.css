@@ -261,29 +261,6 @@ footer {
   display: block;
 }
 
-.accreditation-logos-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 20px 0 10px 0;
-  flex-wrap: wrap;
-}
-
-.accreditation-logos-footer img {
-  height: 45px;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  background-color: white;
-  border-radius: 5px;
-  padding: 5px 10px;
-}
-
-.accreditation-logos-footer img:hover {
-  transform: scale(1.05);
-}
-
 /* Responsive Design - Tablet */
 @media (max-width: 1024px) {
   .footer-container {

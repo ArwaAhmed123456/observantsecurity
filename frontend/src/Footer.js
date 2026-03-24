@@ -53,20 +53,6 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <div className="accreditation-logos-footer">
-          <a href="https://www.chas.co.uk/" target="_blank" rel="noopener noreferrer">
-            <img src="/contracters_logo_1.png" alt="CHAS Contractor" />
-          </a>
-          <a href="https://www.alcumus.com/safecontractor" target="_blank" rel="noopener noreferrer">
-            <img src="/contracters_logo_2.png" alt="SafeContractor" />
-          </a>
-          <a href="https://www.constructionline.co.uk/" target="_blank" rel="noopener noreferrer">
-            <img src="/contracters_logo_3.png" alt="Constructionline" />
-          </a>
-          <a href="https://www.gov.uk/government/organisations/security-industry-authority" target="_blank" rel="noopener noreferrer">
-            <img src="/contracters_logo_4.png" alt="SIA Approved Contractor" />
-          </a>
-        </div>
         <div className="social-links-centered">
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <img src="/linkedin.png" alt="LinkedIn" className="social-icon-img" />
