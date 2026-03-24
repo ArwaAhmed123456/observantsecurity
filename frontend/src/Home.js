@@ -238,6 +238,18 @@ function Home() {
             <a href="https://www.gov.uk/government/organisations/security-industry-authority" target="_blank" rel="noopener noreferrer" className="contractor-logo">
               <img src="/contracters_logo_4.png" alt="SIA Approved Contractor" />
             </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
+              <img src="/contracters_logo_5.png" alt="Our Partner 5" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
+              <img src="/contracters_logo_6.png" alt="Our Partner 6" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
+              <img src="/contracters_logo_7.png" alt="Our Partner 7" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
+              <img src="/contracters_logo_8.png" alt="Our Partner 8" />
+            </a>
           </div>
         </div>
       </section>
