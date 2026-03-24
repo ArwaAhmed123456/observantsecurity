@@ -1,7 +1,7 @@
 const servicesData = [
   {
     title: "Solar Farm Security",
-    image: "/solar_1.jpeg",
+    image: "/original_site_security_image_1.jpeg",
     description: "Comprehensive security solutions for solar energy installations",
     content: [
       "24/7 Monitoring: Continuous surveillance of expansive solar farms to detect and prevent unauthorised access.",
