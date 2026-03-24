@@ -225,31 +225,37 @@ function Home() {
             <span className="section-tag">OUR PARTNERS</span>
             <h2>Trusted by Industry Leaders</h2>
           </div>
-          <div className="contractors-grid">
-            <a href="https://www.chas.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-              <img src="/contracters_logo_1.png" alt="CHAS Contractor" />
-            </a>
-            <a href="https://www.alcumus.com/safecontractor" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-              <img src="/contracters_logo_2.png" alt="SafeContractor" />
-            </a>
-            <a href="https://www.constructionline.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-              <img src="/contracters_logo_3.png" alt="Constructionline" />
-            </a>
-            <a href="https://www.gov.uk/government/organisations/security-industry-authority" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-              <img src="/contracters_logo_4.png" alt="SIA Approved Contractor" />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
-              <img src="/contracters_logo_5.png" alt="Our Partner 5" />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
-              <img src="/contracters_logo_6.png" alt="Our Partner 6" />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
-              <img src="/contracters_logo_7.png" alt="Our Partner 7" />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
-              <img src="/contracters_logo_8.png" alt="Our Partner 8" />
-            </a>
+          <div className="contractors-marquee">
+            <div className="contractors-track">
+              {[...Array(2)].map((_, i) => (
+                <React.Fragment key={i}>
+                  <a href="https://www.chas.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
+                    <img src="/contracters_logo_1.png" alt="CHAS Contractor" />
+                  </a>
+                  <a href="https://www.alcumus.com/safecontractor" target="_blank" rel="noopener noreferrer" className="contractor-logo">
+                    <img src="/contracters_logo_2.png" alt="SafeContractor" />
+                  </a>
+                  <a href="https://www.constructionline.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
+                    <img src="/contracters_logo_3.png" alt="Constructionline" />
+                  </a>
+                  <a href="https://www.gov.uk/government/organisations/security-industry-authority" target="_blank" rel="noopener noreferrer" className="contractor-logo">
+                    <img src="/contracters_logo_4.png" alt="SIA Approved Contractor" />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
+                    <img src="/contracters_logo_5.png" alt="Our Partner 5" />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
+                    <img src="/contracters_logo_6.png" alt="Our Partner 6" />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
+                    <img src="/contracters_logo_7.png" alt="Our Partner 7" />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
+                    <img src="/contracters_logo_8.png" alt="Our Partner 8" />
+                  </a>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </section>
