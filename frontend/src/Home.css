@@ -692,8 +692,8 @@
 }
 
 .contractor-logo img {
-  max-width: 220px;
-  max-height: 100px;
+  width: 200px;
+  height: 100px;
   object-fit: contain;
 }
 
