@@ -1,7 +1,7 @@
 const servicesData = [
   {
     title: "Solar Farm Security",
-    image: "/original_site_security_image_1.jpeg",
+    image: "/solar_1.jpeg",
     description: "Comprehensive security solutions for solar energy installations",
     content: [
       "24/7 Monitoring: Continuous surveillance of expansive solar farms to detect and prevent unauthorised access.",
@@ -23,7 +23,7 @@ const servicesData = [
   },
   {
     title: "Construction Security",
-    image: "/7.ConstructionArea.png",
+    image: "/original_site_security_image_1.jpeg",
     description: "The construction industry suffers from theft and damage by unauthorised entry.",
     content: [
       "Site Access Control: Strict monitoring of all personnel and vehicles entering and leaving the construction site.",
