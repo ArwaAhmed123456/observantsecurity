@@ -66,15 +66,19 @@ const News = () => {
                                 borderLeft: `5px solid ${item.isNewsletter ? '#D4AF37' : '#1B2631'}`
                             }}>
                                 <div style={{
-                                    width: '200px',
+                                    width: '250px',
+                                    flexShrink: 0,
                                     background: '#ececec',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    padding: '20px'
+                                    overflow: 'hidden'
                                 }}>
-                                    {/* Placeholder for actual news images, using logo icon for now */}
-                                    <img src="/logo.png" alt="Observant" style={{ width: '80px', opacity: 0.5 }} />
+                                    {item.image ? (
+                                        <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    ) : (
+                                        <img src="/logo.png" alt="Observant" style={{ width: '80px', opacity: 0.5 }} />
+                                    )}
                                 </div>
                                 <div style={{ padding: '30px', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>

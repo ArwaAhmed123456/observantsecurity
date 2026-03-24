@@ -1,41 +1,57 @@
 const newsData = [
     {
         id: 1,
-        title: "Quarterly Newsletter - Q1 2026",
-        date: "February 1, 2026",
-        summary: "Our latest updates on security standard achievements and team expansions across the UK.",
+        title: "Enhancing Fire Safety in Warehouse Security",
+        date: "March 24, 2026",
+        summary: "Discover how our guards integrate rigorous fire safety checks with standard warehouse protection to prevent devastating losses.",
+        image: "/original/fire_Extinguisher.jpeg",
         content: [
-            "Welcome to our first quarterly newsletter of 2026. This quarter has been focused on team expansion and regional growth.",
-            "We have successfully deployed professional security teams to three new major construction sites in Birmingham.",
-            "Our training programs for BS7858 standards have seen a 100% pass rate among new recruits.",
-            "We continue to invest in the latest CCTV monitoring technology to better serve our remote-secured clients.",
-            "Stay safe and secure with Observant Security."
+            "At Observant Security, we believe comprehensive protection goes beyond just deterring theft. Fire safety is an equally critical component of our warehouse security services.",
+            "Our licensed security officers are specially trained to monitor high-risk zones, ensure fire extinguishers are accessible, and keep emergency exits clear of obstructions during their routine patrols.",
+            "By identifying potential fire hazards before they escalate, we protect both the physical assets of our clients and the lives of their ongoing workforce.",
+            "Contact our team today to learn how we integrate comprehensive health and safety checks into our daily guarding routines."
         ],
         isNewsletter: true
     },
     {
         id: 2,
-        title: "New Standards Training Achieved",
-        date: "January 15, 2026",
-        summary: "Observant Security staff complete advanced training in BS7858 and BS10800 standards.",
+        title: "Advanced Construction Site Security Strategies",
+        date: "March 10, 2026",
+        summary: "Exploring the importance of strict access control and 24/7 manned guarding on active development sites.",
+        image: "/original/original_site_security_image.jpeg",
         content: [
-            "We are proud to announce that our senior security officers have completed the latest BS7858 training.",
-            "Vetting and screening are crucial to our service delivery, and adhering to the highest UK standards is our priority.",
-            "Additionally, we have integrated BS10800 requirements into our standard operating procedures for all manned guarding contracts.",
-            "This ensures that our clients receive service that is not only reliable but also fully compliant with modern industry benchmarks."
+            "Construction sites remain one of the most heavily targeted environments for opportunistic thieves due to the high value of plant machinery and raw materials left overnight.",
+            "Our latest security strategies heavily emphasize strict Site Access Control during working hours and robust 24/7 perimeter defence out-of-hours.",
+            "We employ rigorous screening procedures to ensure only authorised personnel enter the site, fulfilling crucial health and safety compliance protocols.",
+            "Through a combination of highly visible manned guarding and rapid response mobile patrols, we ensure your site is completely secure from day one of development to final handover."
         ],
         isNewsletter: false
     },
     {
         id: 3,
-        title: "Observant Security Celebrates 25 Years",
-        date: "December 20, 2025",
-        summary: "Marking a quarter-century of excellence in the UK security industry.",
+        title: "Securing Remote Solar Farms (Part 1)",
+        date: "February 28, 2026",
+        summary: "How Observant Security combats the rising threat of copper theft in isolated renewable energy installations.",
+        image: "/original/original_solar_security_image.jpeg",
         content: [
-            "Founded in 2000, Observant Security has reached the milestone of 25 years in service.",
-            "We started with a simple mission: to provide service-driven security solutions that clients can trust.",
-            "Today, we protect hundreds of businesses across diverse sectors including construction, retail, and corporate.",
-            "We thank our clients and our dedicated staff for being part of this incredible journey."
+            "With the UK's push towards renewable energy, the sheer number of remote solar farms has increased significantly. Unfortunately, this makes them prime targets for organised crime groups aiming to steal valuable copper wiring and solar panels.",
+            "Observant Security has developed specialised defense mechanisms specifically tailored to these remote locations.",
+            "We implement continuous 24/7 surveillance and perimeter protection systems that act as an unbreachable first line of defense.",
+            "By integrating high-visibility visual deterrence with around-the-clock monitoring, we actively prevent trespassing before any damage can occur to critical infrastructure."
+        ],
+        isNewsletter: false
+    },
+    {
+        id: 4,
+        title: "Securing Remote Solar Farms (Part 2)",
+        date: "February 15, 2026",
+        summary: "Exploring our specialist optics and rapid response capabilities for total situational awareness.",
+        image: "/original/original_solar_security_image_1.jpeg",
+        content: [
+            "Building upon our perimeter defense strategies, technological integration forms the backbone of our advanced Solar Farm security solutions.",
+            "Our complimentary technology deployment includes night-vision superiority and thermal optics capable of identifying threats in completely unlit, rural environments.",
+            "When a potential threat is detected, our Rapid Response Teams are dispatched immediately, arriving on-site to intercept intruders safely and efficiently.",
+            "This seamless blend of cutting-edge technology and licensed manned response ensures uninterrupted power generation for our clients."
         ],
         isNewsletter: false
     }
