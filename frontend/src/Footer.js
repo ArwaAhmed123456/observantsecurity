@@ -33,13 +33,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-section footer-contact">
-          <h3>Contact Information</h3>
-          <p><strong>📞 Phone:</strong><br /><a href="tel:+447446084868">+44 7446 084868</a></p>
-          <p><strong>📧 Email:</strong><br /><a href="mailto:abid.fiaz@observantsecurity.co.uk">abid.fiaz@observantsecurity.co.uk</a></p>
-          <p><strong>📍 Address:</strong><br />A9 ParkLane Castle Vale<br />Birmingham, UK</p>
-        </div>
-
         <div className="footer-section footer-policies">
           <h3>Legal & Policies</h3>
           <ul>
@@ -49,6 +42,13 @@ const Footer = () => {
             <li><Link to="/policy/business-continuity">Business Continuity Plan</Link></li>
             <li><Link to="/policy/mission">Our Mission</Link></li>
           </ul>
+        </div>
+
+        <div className="footer-section footer-contact">
+          <h3>Contact Information</h3>
+          <p><strong>📞 Phone:</strong><br /><a href="tel:+447446084868">+44 7446 084868</a></p>
+          <p><strong>📧 Email:</strong><br /><a href="mailto:abid.fiaz@observantsecurity.co.uk">abid.fiaz@observantsecurity.co.uk</a></p>
+          <p><strong>📍 Address:</strong><br />A9 ParkLane Castle Vale<br />Birmingham, UK</p>
         </div>
       </div>
 
