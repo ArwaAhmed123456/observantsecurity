@@ -4,8 +4,8 @@ const servicesData = [
     image: "/solar_1.jpeg",
     description: "Comprehensive security solutions for solar energy installations",
     content: [
-      "24/7 Monitoring: Continuous surveillance of expansive solar farms to detect and prevent unauthorized access.",
-      "Perimeter Protection: Advanced perimeter defense systems to safeguard valuable panels, inverters, and copper wiring.",
+      "24/7 Monitoring: Continuous surveillance of expansive solar farms to detect and prevent unauthorised access.",
+      "Perimeter Protection: Advanced perimeter defence systems to safeguard valuable panels, inverters, and copper wiring.",
       "Rapid Response Teams: Immediate dispatch of trained personnel to investigate triggered alarms or suspicious activities.",
       "Technological Integration: Seamless integration of CCTV, motion sensors, and drone patrols for total situational awareness."
     ]
@@ -17,14 +17,14 @@ const servicesData = [
     content: [
       "Remote Monitoring: 24/7 off-site surveillance provided by our BS5979 / BS8418 approved monitoring partners.",
       "Proactive Deterrence: Real-time audio intervention to warn off trespassers before damage occurs.",
-      "System Integration: Capability to utilize your existing CCTV system or design a customized visual security network.",
+      "System Integration: Capability to utilise your existing CCTV system or design a customised visual security network.",
       "Incident Escalation: Automated and reliable escalation processes ensuring police or mobile patrols are dispatched instantly."
     ]
   },
   {
     title: "Construction Security",
     image: "/7.ConstructionArea.png",
-    description: "The construction industry suffers from theft and damage by unauthorized entry.",
+    description: "The construction industry suffers from theft and damage by unauthorised entry.",
     content: [
       "Site Access Control: Strict monitoring of all personnel and vehicles entering and leaving the construction site.",
       "Asset Protection: Guarding high-value plant machinery, tools, and raw materials from overnight theft.",
@@ -38,9 +38,9 @@ const servicesData = [
     description: "Ensuring that your business environment is monitored and protected.",
     content: [
       "Front of House Guarding: Professional concierges providing a welcoming yet secure first point of contact for staff and visitors.",
-      "Access Management: Issuing badges, managing visitor logs, and ensuring only authorized personnel enter private floors.",
-      "Conflict Resolution: Highly trained personnel capable of de-escalating disputes and handling challenging behavior discreetly.",
-      "Emergency Evacuation: Experienced officers to lead safe and organized evacuations during fire alarms or security threats."
+      "Access Management: Issuing badges, managing visitor logs, and ensuring only authorised personnel enter private floors.",
+      "Conflict Resolution: Highly trained personnel capable of de-escalating disputes and handling challenging behaviour discreetly.",
+      "Emergency Evacuation: Experienced officers to lead safe and organised evacuations during fire alarms or security threats."
     ]
   },
   {
@@ -59,7 +59,7 @@ const servicesData = [
     image: "/2.CarPatrolling.png",
     description: "Cost-effective solutions for on-site visual deterrence.",
     content: [
-      "Randomized Patrols: Unpredictable vehicle patrols to disrupt criminal reconnaissance and deter trespassing.",
+      "Randomised Patrols: Unpredictable vehicle patrols to disrupt criminal reconnaissance and deter trespassing.",
       "Lock and Unlock Services: Secure opening of premises in the morning and thorough checking/locking at night.",
       "Alarm Response: Rapid deployment to site to investigate alarm activations safely on behalf of keyholders.",
       "Digital Reporting: Real-time electronic logs and photographic evidence provided after every patrol via our secure portal."

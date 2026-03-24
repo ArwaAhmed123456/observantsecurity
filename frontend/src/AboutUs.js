@@ -50,7 +50,7 @@ function AboutUs() {
         <div className="section-content">
           <h2>Philosophy, Ethics and Principles</h2>
           <p>
-            Observant Security Solutions is a UK-owned national company that specializes in
+            Observant Security Solutions is a UK-owned national company that specialises in
             end-to-end security solutions.
           </p>
           <p>
@@ -67,7 +67,7 @@ function AboutUs() {
         <div className="section-content">
           <h2>Our Process</h2>
           <p>
-            Observant Security operates across Yorkshire and Lancashire, and we take pride in providing face-to-face interactions with our clients. A free site visit and consultation will always be conducted by a senior management member before any contract is finalized. This approach allows clients to associate a face with a name, ensuring that any issues they may have are addressed promptly and efficiently by someone they know. Our management team is available via phone 24/7, and face-to-face follow-up meetings can be scheduled when necessary.
+            Observant Security operates across Yorkshire and Lancashire, and we take pride in providing face-to-face interactions with our clients. A free site visit and consultation will always be conducted by a senior management member before any contract is finalised. This approach allows clients to associate a face with a name, ensuring that any issues they may have are addressed promptly and efficiently by someone they know. Our management team is available via phone 24/7, and face-to-face follow-up meetings can be scheduled when necessary.
           </p>
         </div>
       </section>

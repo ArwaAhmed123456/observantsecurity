@@ -45,7 +45,7 @@ const policiesData = {
             "To provide a secure and safe environment for our clients, our people, and the wider community.",
             "To be the leading service-driven security solution provider in the UK.",
             "To deliver exceptional value through professional standards and genuine care.",
-            "To leverage over two decades of experience in the security industry for the benefit of our clients.",
+            "To leverage our growing expertise in the security industry for the benefit of our clients.",
             "To foster long-term working relationships built on trust, reliability, and excellence."
         ]
     }

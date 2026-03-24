@@ -17,10 +17,10 @@ function Home() {
         <div className="content">
           <h1>Professional Security Solutions Across the UK</h1>
           <h2>
-            SIA-Licensed Security Guards & <span className="highlight">24/7 Protection</span> for Your Business
+            SIA-Licensed Subcontractor & <span className="highlight">24/7 Protection</span> for Your Business
           </h2>
           <p>
-            Trusted security services for businesses nationwide. From manned guarding to mobile patrols,
+            Trusted security professional services for businesses nationwide. From manned guarding to mobile patrols,
             we deliver comprehensive protection tailored to your needs.
           </p>
           <div className="buttons">
@@ -49,10 +49,10 @@ function Home() {
           <div className="about-cards">
             <div className="about-card">
               <div className="card-icon">
-                <img src="/CIA_Licensed.png" alt="SIA Licensed" />
+                <img src="/CIA_Licensed.png" alt="SIA Licensed Subcontractor" />
               </div>
-              <h3>SIA Licensed</h3>
-              <p>All our security personnel are fully SIA licensed and professionally trained to the highest standards.</p>
+              <h3>SIA Licensed Subcontractor</h3>
+              <p>All our security personnel are fully SIA licensed subcontractors and professionally trained to the highest standards.</p>
             </div>
             <div className="about-card">
               <div className="card-icon">
@@ -63,10 +63,10 @@ function Home() {
             </div>
             <div className="about-card">
               <div className="card-icon">
-                <img src="/ExperiencedTeam.png" alt="25+ Years Experience" />
+                <img src="/ExperiencedTeam.png" alt="Fast-Growing Company" />
               </div>
-              <h3>25+ Years Experience</h3>
-              <p>Over two decades of excellence in providing tailored security solutions to diverse industries.</p>
+              <h3>Fast-Growing Company</h3>
+              <p>Committed to excellence in providing tailored security solutions to diverse industries across the UK.</p>
             </div>
           </div>
         </div>
@@ -111,36 +111,36 @@ function Home() {
         <div className="section-container">
           <div className="section-header">
             <span className="section-tag">WHY CHOOSE US</span>
-            <h2>Your Safety is Our Priority</h2>
+            <h2>Our Technology & Approach</h2>
           </div>
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/Rapid_response.png" alt="Rapid Response" />
+                <img src="/Rapid_response.png" alt="Complimentary Tech Deployment" />
               </div>
-              <h3>Rapid Response</h3>
-              <p>Fast deployment and emergency response services available 24/7 across the UK.</p>
+              <h3>Complimentary Tech Deployment</h3>
+              <p>Ask about our Free 30-Day Portable Camera trial for new solar farm contracts.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/ExperiencedTeam.png" alt="Experienced Team" />
+                <img src="/ExperiencedTeam.png" alt="Night-Vision Superiority" />
               </div>
-              <h3>Experienced Team</h3>
-              <p>Highly trained, vetted security professionals with extensive industry experience.</p>
+              <h3>Night-Vision Superiority</h3>
+              <p>Specialist optics for 24/7 perimeter monitoring in remote, unlit locations.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/tailored_Sol.png" alt="Tailored Solutions" />
+                <img src="/tailored_Sol.png" alt="Body-Cam Accountability" />
               </div>
-              <h3>Tailored Solutions</h3>
-              <p>Customized security plans designed to meet your specific business requirements.</p>
+              <h3>Body-Cam Accountability</h3>
+              <p>Transparent, recorded patrolling for maximum site security and legal protection.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/Competitive_pricing.png" alt="Competitive Pricing" />
+                <img src="/Competitive_pricing.png" alt="Active Visual Deterrence" />
               </div>
-              <h3>Competitive Pricing</h3>
-              <p>Professional security services at competitive rates with transparent pricing.</p>
+              <h3>Active Visual Deterrence</h3>
+              <p>High-intensity beacon systems to signal a high-security presence to potential trespassers.</p>
             </div>
           </div>
         </div>
@@ -151,8 +151,8 @@ function Home() {
         <div className="section-container">
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number">25+</div>
-              <div className="stat-label">Years in Business</div>
+              <div className="stat-number">UK</div>
+              <div className="stat-label">Nationwide Coverage</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">500+</div>
@@ -164,7 +164,7 @@ function Home() {
             </div>
             <div className="stat-card">
               <div className="stat-number">100%</div>
-              <div className="stat-label">SIA Licensed</div>
+              <div className="stat-label">SIA Licensed Subcontractor</div>
             </div>
           </div>
         </div>
@@ -214,6 +214,30 @@ function Home() {
               </div>
               <h3>Solar Farms</h3>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Contractors / Partners */}
+      <section className="contractors-section">
+        <div className="section-container">
+          <div className="section-header">
+            <span className="section-tag">OUR PARTNERS</span>
+            <h2>Trusted by Industry Leaders</h2>
+          </div>
+          <div className="contractors-grid">
+            <a href="https://www.chas.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
+              <img src="/contracters_logo_1.png" alt="CHAS Contractor" />
+            </a>
+            <a href="https://www.alcumus.com/safecontractor" target="_blank" rel="noopener noreferrer" className="contractor-logo">
+              <img src="/contracters_logo_2.png" alt="SafeContractor" />
+            </a>
+            <a href="https://www.constructionline.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
+              <img src="/contracters_logo_3.png" alt="Constructionline" />
+            </a>
+            <a href="https://www.gov.uk/government/organisations/security-industry-authority" target="_blank" rel="noopener noreferrer" className="contractor-logo">
+              <img src="/contracters_logo_4.png" alt="SIA Approved Contractor" />
+            </a>
           </div>
         </div>
       </section>
