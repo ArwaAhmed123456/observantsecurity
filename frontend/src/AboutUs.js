@@ -19,6 +19,27 @@ function AboutUs() {
             Our mission is to provide a secure and safe environment for our clients,
             our people, and the wider community.
           </p>
+          <div style={{ marginTop: '30px' }}>
+            <a 
+              href="/Observant_Security_Brochure.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn primary" 
+              style={{ 
+                padding: '15px 35px', 
+                fontSize: '1.1rem', 
+                backgroundColor: '#D4AF37', 
+                color: '#1B2631', 
+                textDecoration: 'none', 
+                borderRadius: '5px', 
+                fontWeight: 'bold',
+                boxShadow: '0 4px 15px rgba(212, 175, 55, 0.3)',
+                display: 'inline-block'
+              }}
+            >
+              📥 Download Company Brochure
+            </a>
+          </div>
         </div>
       </div>
 
