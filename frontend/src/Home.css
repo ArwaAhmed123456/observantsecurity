@@ -84,11 +84,13 @@
   letter-spacing: 0.5px;
 }
 
-.buttons .primary {
+.buttons .btn.primary {
   background-color: #D4AF37;
   color: #1B2631;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
   animation: pulse-gold 3s infinite;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 @keyframes pulse-gold {
@@ -167,8 +169,8 @@
 }
 
 .about-section .section-container {
-  max-width: 100%;
-  padding: 0 60px;
+  max-width: 1400px; /* Increased from 1200px */
+  padding: 0 40px;
   width: 100%;
   box-sizing: border-box;
 }

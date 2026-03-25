@@ -84,6 +84,46 @@ function AboutUs() {
           </p>
         </div>
       </section>
+
+      {/* Brochure Section */}
+      <section className="about-section brochure-section">
+        <div className="section-container">
+          <div className="section-header" style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2>Our Company Brochure</h2>
+            <p className="section-description">Download or view our professional security services brochure</p>
+            <div style={{ marginTop: '20px' }}>
+              <a href="/broucher/broucher_frontside.jpeg" download className="btn primary" style={{ marginRight: '15px' }}>Front Side</a>
+              <a href="/broucher/broucher_backside.jpeg" download className="btn primary">Back Side</a>
+            </div>
+          </div>
+          <div className="brochure-display" style={{ 
+            display: 'flex', 
+            gap: '30px', 
+            justify-content: 'center', 
+            flexWrap: 'wrap',
+            padding: '20px'
+          }}>
+            <div className="brochure-page" style={{ 
+              flex: '1', 
+              maxWidth: '500px', 
+              boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+              borderRadius: '8px',
+              overflow: 'hidden'
+            }}>
+              <img src="/broucher/broucher_frontside.jpeg" alt="Brochure Front" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+            <div className="brochure-page" style={{ 
+              flex: '1', 
+              maxWidth: '500px', 
+              boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+              borderRadius: '8px',
+              overflow: 'hidden'
+            }}>
+              <img src="/broucher/broucher_backside.jpeg" alt="Brochure Back" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
