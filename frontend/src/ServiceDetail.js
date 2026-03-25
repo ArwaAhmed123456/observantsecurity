@@ -38,7 +38,7 @@ function ServiceDetail() {
         <div className="overlay-expert"></div>
         <div className="hero-content-expert">
           <button onClick={() => navigate(-1)} className="back-link-expert">
-            <i className="fas fa-arrow-left"></i> Back to Services
+            <i className="fas fa-arrow-left"></i> ← Back
           </button>
           <h1>{service.title}</h1>
           <p className="hero-intro-text">{detailedContent.intro}</p>
@@ -107,7 +107,7 @@ function ServiceDetail() {
       <section className="accreditations-section-expert">
         <div className="container-expert">
           <div className="accreditation-header-expert">
-             <h3>Fully Accredited & Compliant</h3>
+             <h3>Accreditations & Certifications</h3>
              <p>Trusted by UK contractors for audit-ready security solutions.</p>
           </div>
           <div className="accreditation-marquee-expert">

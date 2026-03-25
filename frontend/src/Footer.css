@@ -7,29 +7,6 @@ footer {
   padding: 0;
 }
 
-.footer-top {
-  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-  padding: 40px 20px;
-  background-color: #1B2631;
-  text-align: center;
-}
-
-.footer-top-text h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.footer-top-text p {
-  font-size: 1rem;
-  color: #D4AF37;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-top: 5px;
-}
 
 .footer-container {
   background-color: #1B2631;
@@ -181,40 +158,28 @@ footer {
 .social-links-centered {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-bottom: 20px;
-  padding-top: 20px;
+  gap: 30px; /* Increased gap for better spacing without circles */
+  margin-bottom: 30px;
+  padding-top: 30px;
 }
 
 .social-links-centered a {
-  background-color: rgba(212, 175, 55, 0.05);
-  padding: 12px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-decoration: none;
 }
 
 .social-links-centered a:hover {
-  background-color: #D4AF37;
-  transform: translateY(-8px) scale(1.1);
-  border-color: #D4AF37;
-  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+  transform: scale(1.2);
 }
 
 .social-icon-img {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* Make icons white by default */
-  transition: filter 0.3s ease;
-}
-
-.social-links-centered a:hover .social-icon-img {
-  filter: brightness(0); /* Make icons black/dark on gold hover */
+  /* Original colors restored - No filter */
 }
 
 .copyright-bar {

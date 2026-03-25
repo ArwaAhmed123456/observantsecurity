@@ -17,7 +17,7 @@ function Home() {
         <div className="content">
           <h1>Professional Security Solutions Across the UK</h1>
           <h2>
-            SIA-Licensed Subcontractor & <span className="highlight">24/7 Protection</span> for Your Business
+            SIA Licensed Security Officers & <span className="highlight">24/7 Protection</span> for Your Business
           </h2>
           <p>
             Trusted security professional services for businesses nationwide. From manned guarding to mobile patrols,
@@ -39,7 +39,7 @@ function Home() {
         <div className="section-container">
           <div className="section-header">
             <span className="section-tag">ABOUT US</span>
-            <h2>Observant Security - Your Trusted Security Partner Since 2000</h2>
+            <h2>Observant Security - Your Trusted Security Provider</h2>
             <p className="section-description">
               Observant Security Solution was formed in 2000 in response to the need for a security company
               with a service-driven approach. We provide professional, reliable security solutions to businesses
@@ -49,10 +49,17 @@ function Home() {
           <div className="about-cards">
             <div className="about-card">
               <div className="card-icon">
-                <img src="/CIA_Licensed.png" alt="SIA Licensed Subcontractor" />
+                <img src="/CIA_Licensed.png" alt="SIA Licensed Security Officers" />
               </div>
-              <h3>SIA Licensed Subcontractor</h3>
-              <p>All our security personnel are fully SIA licensed subcontractors and professionally trained to the highest standards.</p>
+              <h3>SIA Licensed Security Officers</h3>
+              <p>All our security personnel are fully SIA licensed and professionally trained to the highest standards.</p>
+            </div>
+            <div className="about-card">
+              <div className="card-icon">
+                <img src="/tailored_Sol.png" alt="Integrated Security Solutions" />
+              </div>
+              <h3>Integrated Security Solutions</h3>
+              <p>Specialist CCTV Tower surveillance & static guarding for comprehensive site protection.</p>
             </div>
             <div className="about-card">
               <div className="card-icon">
@@ -164,7 +171,7 @@ function Home() {
             </div>
             <div className="stat-card">
               <div className="stat-number">100%</div>
-              <div className="stat-label">SIA Licensed Subcontractor</div>
+              <div className="stat-label">SIA Licensed Security Officers</div>
             </div>
           </div>
         </div>
@@ -222,8 +229,8 @@ function Home() {
       <section className="contractors-section">
         <div className="section-container">
           <div className="section-header">
-            <span className="section-tag">OUR PARTNERS</span>
-            <h2>Trusted by Industry Leaders</h2>
+            <span className="section-tag">ACCREDITATIONS</span>
+            <h2>Accreditations & Certifications</h2>
           </div>
           <div className="contractors-marquee">
             <div className="contractors-track">
@@ -241,18 +248,18 @@ function Home() {
                   <a href="https://www.gov.uk/government/organisations/security-industry-authority" target="_blank" rel="noopener noreferrer" className="contractor-logo">
                     <img src="/contracters_logo_4.png" alt="SIA Approved Contractor" />
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/contracters_logo_5.png" alt="Our Partner 5" />
-                  </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/contracters_logo_6.png" alt="Our Partner 6" />
-                  </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/contracters_logo_7.png" alt="Our Partner 7" />
-                  </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/contracters_logo_8.png" alt="Our Partner 8" />
-                  </a>
+                  <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
+                    <img src="/contracters_logo_5.png" alt="Accreditation Logo" />
+                  </div>
+                  <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
+                    <img src="/contracters_logo_6.png" alt="Accreditation Logo" />
+                  </div>
+                  <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
+                    <img src="/contracters_logo_7.png" alt="Accreditation Logo" />
+                  </div>
+                  <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
+                    <img src="/contracters_logo_8.png" alt="Accreditation Logo" />
+                  </div>
                 </React.Fragment>
               ))}
             </div>

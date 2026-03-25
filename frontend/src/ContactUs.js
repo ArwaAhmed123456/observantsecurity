@@ -78,7 +78,6 @@ function Contact() {
           <p className="hero-description">
             Get in touch with our team to discuss your security needs
           </p>
-          <button className="hero-button">How Can We Keep You Safe</button>
         </div>
       </div>
 
@@ -94,8 +93,9 @@ function Contact() {
       <div className="contact-form-section">
         <div className="form-container">
           <div className="form-left">
-            <p>Please fill in our short form and a member of our team will be in touch within 24 hours.</p>
+            <img src="/Questions-pana.png" alt="Contact Questions" className="contact-form-img" />
             <p className="feel-free">Feel Free to Contact Us</p>
+            <p>Please fill in our short form and a member of our team will be in touch within 60 min.</p>
           </div>
           <div className="form-right">
             <h2>Enquire Today</h2>

@@ -11,13 +11,17 @@ import Register from "./Register";
 import Dashboard from "./Dashboard";
 import Policies from "./Policies";
 import News from "./News";
+import FAQ from "./FAQ";
 import Trainings from "./Trainings";
 import Footer from "./Footer";
+import ChatBot from "./ChatBot";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -34,9 +38,11 @@ function App() {
           <Route path="/mission" element={<Policies />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:newsId" element={<News />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/trainings" element={<Trainings />} />
         </Routes>
         <Footer />
+        <ChatBot />
       </Router>
     </AuthProvider>
   );

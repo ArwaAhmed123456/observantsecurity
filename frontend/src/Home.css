@@ -14,7 +14,7 @@
   color: white;
   margin: 0;
   padding: 0;
-  margin-top: 80px;
+  margin-top: 90px; /* Matched to Navbar height */
 }
 
 .overlay {
@@ -88,6 +88,13 @@
   background-color: #D4AF37;
   color: #1B2631;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  animation: pulse-gold 3s infinite;
+}
+
+@keyframes pulse-gold {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
 
 .buttons .primary:hover {
@@ -168,8 +175,8 @@
 
 .about-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
   margin-top: 50px;
 }
 
@@ -269,8 +276,8 @@
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -278,8 +285,7 @@
 }
 
 .service-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .service-image {
@@ -296,7 +302,7 @@
 }
 
 .service-card:hover .service-image img {
-  transform: scale(1.1);
+  transform: none;
 }
 
 .service-overlay {
@@ -338,8 +344,7 @@
 }
 
 .service-card:hover .service-arrow {
-  transform: translateX(5px);
-  display: inline-block;
+  color: #1B2631;
 }
 
 .view-all-services {
@@ -695,6 +700,9 @@
   width: 200px;
   height: 100px;
   object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  border-radius: 4px;
 }
 
 @media (max-width: 768px) {

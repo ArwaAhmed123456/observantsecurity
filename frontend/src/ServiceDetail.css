@@ -22,8 +22,8 @@
   background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start; /* Left-align */
+  text-align: left; /* Left-align */
   color: white;
 }
 
@@ -39,8 +39,9 @@
 .hero-content-expert {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  padding: 0 20px;
+  max-width: 900px;
+  padding: 0 40px;
+  margin: 0; /* Left alignment */
 }
 
 .back-link-expert {
@@ -198,9 +199,9 @@
 }
 
 .section-header-expert {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
+  text-align: left; /* Left-align */
+  max-width: 1000px;
+  margin: 0 0 60px 0;
 }
 
 .section-header-expert h2 {
@@ -221,7 +222,7 @@
   border-radius: 16px;
   border: 1px solid #f1f2f6;
   transition: all 0.3s ease;
-  text-align: center;
+  text-align: left; /* Left-align features */
 }
 
 .feature-card-expert:hover {
@@ -240,7 +241,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
-  margin: 0 auto 25px;
+  margin: 0 0 25px 0; /* Left-align icon */
   transition: all 0.3s ease;
 }
 
@@ -268,7 +269,7 @@
 }
 
 .accreditation-header-expert {
-  text-align: center;
+  text-align: left; /* Left-align */
   margin-bottom: 40px;
 }
 
@@ -297,9 +298,14 @@
 .marquee-content-expert img {
   height: 60px;
   width: auto;
-  filter: grayscale(1) brightness(2);
-  opacity: 0.7;
-  transition: all 0.3s ease;
+  filter: none;
+  opacity: 1;
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.95); /* Better visibility for dark logos */
+  padding: 8px 15px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 0 5px;
 }
 
 .marquee-content-expert img:hover {

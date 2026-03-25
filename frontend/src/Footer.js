@@ -5,12 +5,6 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-top">
-        <div className="footer-top-text">
-          <h2>Observant Security</h2>
-          <p>Premier Security Solutions UK</p>
-        </div>
-      </div>
 
       <div className="footer-container">
         <div className="footer-section footer-services">
@@ -38,6 +32,7 @@ const Footer = () => {
             <li><Link to="/policy/social-media">Social Media Policy</Link></li>
             <li><Link to="/policy/business-continuity">Business Continuity Plan</Link></li>
             <li><Link to="/policy/mission">Our Mission</Link></li>
+            <li><Link to="/faq">FAQ</Link></li>
           </ul>
         </div>
 

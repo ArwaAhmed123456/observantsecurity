@@ -1,114 +1,119 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import newsData from './newsData';
-import './About.css'; // Reuse base styles
+import './News.css';
 
 const News = () => {
     const { newsId } = useParams();
+    const [searchTerm, setSearchTerm] = useState('');
 
-    // Detailed View
     if (newsId) {
         const item = newsData.find(n => n.id === parseInt(newsId));
-        if (!item) return <div className="about-container"><h2>News not found</h2></div>;
+        if (!item) return <div className="news-page"><div className="news-container"><h2>Article not found</h2></div></div>;
 
         return (
-            <div className="about-container">
-                <div className="about-hero" style={{ background: '#1B2631', height: '35vh' }}>
-                    <div className="hero-content">
-                        <span style={{ color: '#D4AF37', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase' }}>
-                            {item.isNewsletter ? "Newsletter" : "Company Update"}
-                        </span>
-                        <h1 style={{ marginTop: '10px', fontSize: '2.5rem' }}>{item.title}</h1>
-                        <p style={{ opacity: 0.8 }}>Published on {item.date}</p>
-                    </div>
-                </div>
-                <section className="about-section" style={{ padding: '60px 20px', background: '#f9f9f9' }}>
-                    <div className="section-content" style={{ background: '#fff', padding: '50px', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', maxWidth: '800px', margin: '0 auto' }}>
-                        <div style={{ textAlign: 'left', color: '#333', fontSize: '1.1rem', lineHeight: '1.8' }}>
+            <div className="news-page detail-view">
+                <div className="news-container">
+                    <article className="news-detail-wrapper">
+                        <header className="news-detail-meta">
+                            <span className="news-category">
+                                {item.isNewsletter ? "QUARTERLY NEWSLETTER" : "BLOG ARTICLE"}
+                            </span>
+                            <h1 className="news-detail-title">{item.title}</h1>
+                            <span className="news-detail-date">Published on {item.date}</span>
+                        </header>
+
+                        {item.image && (
+                            <img src={item.image} alt={item.title} className="news-detail-image" />
+                        )}
+
+                        <div className="news-detail-content">
                             {item.content.map((p, i) => (
-                                <p key={i} style={{ marginBottom: '25px' }}>{p}</p>
+                                <p key={i}>{p}</p>
                             ))}
                         </div>
-                        <div style={{ marginTop: '40px', borderTop: '1px solid #eee', paddingTop: '20px' }}>
-                            <Link to="/news" style={{ color: '#1B2631', fontWeight: 'bold', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '5px' }}>
-                                ← Back to All Updates
+
+                        <footer className="back-to-news">
+                            <Link to="/news">
+                                <i className="fas fa-arrow-left"></i> Back to Blog & Insights
                             </Link>
-                        </div>
-                    </div>
-                </section>
+                        </footer>
+                    </article>
+                </div>
             </div>
         );
     }
 
-    // List View - Professional Vertical Feed
+    // Filter news based on search term
+    const filteredNews = newsData.filter(item => 
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.summary.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
-        <div className="about-container">
-            <div className="about-hero" style={{ background: '#1B2631', height: '40vh' }}>
+        <div className="news-page">
+            <div className="news-hero">
+                <div className="hero-overlay"></div>
                 <div className="hero-content">
-                    <h1 style={{ fontSize: '3rem', marginBottom: '15px' }}>News & Insights</h1>
-                    <p style={{ fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto', opacity: 0.9 }}>
-                        Stay informed on the latest developments, quarterly newsletters, and industry insights from Observant Security.
-                    </p>
+                    <span className="section-tag">INSIGHTS & UPDATES</span>
+                    <h1>The Observant Blog</h1>
+                    <p>Expert perspectives on the UK security landscape, industry trends, and company news.</p>
+                    
+                    <div className="search-container">
+                        <input 
+                            type="text" 
+                            placeholder="Search articles..." 
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="news-search"
+                        />
+                        <i className="fas fa-search search-icon"></i>
+                    </div>
                 </div>
             </div>
 
-            <section className="about-section" style={{ background: '#f4f4f4', padding: '80px 20px' }}>
-                <div className="section-content" style={{ maxWidth: '900px', margin: '0 auto' }}>
-                    <div className="news-feed" style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-                        {newsData.map(item => (
-                            <div key={item.id} className="news-card-horizontal" style={{
-                                display: 'flex',
-                                background: '#fff',
-                                borderRadius: '8px',
-                                overflow: 'hidden',
-                                boxShadow: '0 4px 10px rgba(0,0,0,0.03)',
-                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                                borderLeft: `5px solid ${item.isNewsletter ? '#D4AF37' : '#1B2631'}`
-                            }}>
-                                <div style={{
-                                    width: '250px',
-                                    flexShrink: 0,
-                                    background: '#ececec',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    overflow: 'hidden'
-                                }}>
-                                    {item.image ? (
-                                        <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                    ) : (
-                                        <img src="/logo.png" alt="Observant" style={{ width: '80px', opacity: 0.5 }} />
-                                    )}
-                                </div>
-                                <div style={{ padding: '30px', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-                                        <span style={{ color: item.isNewsletter ? '#D4AF37' : '#666', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                                            {item.isNewsletter ? "QUARTERLY NEWSLETTER" : "PRESS RELEASE"}
-                                        </span>
-                                        <span style={{ fontSize: '0.85rem', color: '#999' }}>{item.date}</span>
+            <div className="news-container">
+                {filteredNews.length > 0 ? (
+                    <div className="news-grid">
+                        {filteredNews.map((item) => (
+                            <div key={item.id} className="news-card">
+                                <Link to={`/news/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <div className="card-image">
+                                        <img src={item.image} alt={item.title} />
+                                        <span className="card-category">Blog</span>
                                     </div>
-                                    <h3 style={{ marginBottom: '15px', fontSize: '1.5rem', color: '#1B2631' }}>{item.title}</h3>
-                                    <p style={{ color: '#555', fontSize: '1rem', lineHeight: '1.6', marginBottom: '20px' }}>
-                                        {item.summary}
-                                    </p>
-                                    <div>
-                                        <Link to={`/news/${item.id}`} style={{
-                                            display: 'inline-block',
-                                            padding: '8px 20px',
-                                            background: '#1B2631',
-                                            color: '#fff',
-                                            textDecoration: 'none',
-                                            borderRadius: '4px',
-                                            fontSize: '0.9rem',
-                                            fontWeight: '500'
-                                        }}>
-                                            Read Full Article
-                                        </Link>
+                                    <div className="card-body">
+                                        <span className="card-date">{item.date}</span>
+                                        <h3>{item.title}</h3>
+                                        <p>{item.summary}</p>
+                                        <div className="read-more-btn">
+                                            Read Article <i className="fas fa-arrow-right"></i>
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             </div>
                         ))}
                     </div>
+                ) : (
+                    <div className="no-results">
+                        <i className="fas fa-search"></i>
+                        <h3>No articles found</h3>
+                        <p>Try adjusting your search terms to find what you're looking for.</p>
+                        <button onClick={() => setSearchTerm('')} className="reset-btn">View All Articles</button>
+                    </div>
+                )}
+            </div>
+
+            <section className="newsletter-section">
+                <div className="newsletter-container">
+                    <div className="newsletter-text">
+                        <h2>Stay Informed</h2>
+                        <p>Subscribe to our monthly blog digest for the latest security insights and UK industry updates.</p>
+                    </div>
+                    <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
+                        <input type="email" placeholder="Enter your email" required />
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </section>
         </div>
