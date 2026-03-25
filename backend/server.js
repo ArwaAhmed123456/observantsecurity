@@ -14,7 +14,11 @@ const Contact = require('./models/Contact');
 const authRoute = require('./routes/auth');
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+  origin: ['https://observantsecurity.co.uk', 'http://localhost:3000'],
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Route Middlewares

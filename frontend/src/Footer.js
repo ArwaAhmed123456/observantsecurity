@@ -5,17 +5,14 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-container">
-        <div className="footer-section footer-brand-info">
-          <Link to="/" className="footer-logo">
-            <img src="/logo.png" alt="Observant Security" />
-            <h3>Observant Security</h3>
-          </Link>
-          <p>
-            Professional, service-driven security solutions across the UK. Protecting your assets with 24/7 reliability since 2000.
-          </p>
+      <div className="footer-top">
+        <div className="footer-top-text">
+          <h2>Observant Security</h2>
+          <p>Premier Security Solutions UK</p>
         </div>
+      </div>
 
+      <div className="footer-container">
         <div className="footer-section footer-services">
           <h3>Our Services</h3>
           <div className="services-columns">
@@ -46,9 +43,11 @@ const Footer = () => {
 
         <div className="footer-section footer-contact">
           <h3>Contact Information</h3>
-          <p><strong>📞 Phone:</strong><br /><a href="tel:+447446084868">+44 7446 084868</a></p>
-          <p><strong>📧 Email:</strong><br /><a href="mailto:abid.fiaz@observantsecurity.co.uk">abid.fiaz@observantsecurity.co.uk</a></p>
-          <p><strong>📍 Address:</strong><br />A9 ParkLane Castle Vale<br />Birmingham, UK</p>
+          <div className="contact-details">
+            <p><strong>📞 Phone:</strong> <a href="tel:+447446084868">+44 7446 084868</a></p>
+            <p><strong>📧 Email:</strong> <a href="mailto:abid.fiaz@observantsecurity.co.uk">abid.fiaz@observantsecurity.co.uk</a></p>
+            <p><strong>📍 Address:</strong> A9 ParkLane Castle Vale, Birmingham, UK</p>
+          </div>
         </div>
       </div>
 

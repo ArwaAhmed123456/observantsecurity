@@ -1,11 +1,21 @@
 {
   "short_name": "Observant",
-  "name": "Observant Security",
+  "name": "Observant Security | Premier Solutions",
   "icons": [
     {
       "src": "logo.png",
-      "sizes": "192x192 512x512 64x64 32x32",
+      "sizes": "64x64 32x24 24x24 16x16",
       "type": "image/png"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",

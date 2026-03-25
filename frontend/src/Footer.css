@@ -7,104 +7,86 @@ footer {
   padding: 0;
 }
 
+.footer-top {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  padding: 40px 20px;
+  background-color: #1B2631;
+  text-align: center;
+}
+
+.footer-top-text h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer-top-text p {
+  font-size: 1rem;
+  color: #D4AF37;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
 .footer-container {
   background-color: #1B2631;
   color: #FFFFFF;
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr 1fr;
-  gap: 30px;
-  padding: 40px 20px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  padding: 60px 20px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   line-height: 1.6;
   box-sizing: border-box;
   align-items: flex-start;
 }
 
-.footer-brand-info {
-  text-align: left;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  text-decoration: none;
-}
-
-.footer-logo img {
-  height: 50px;
-  width: auto;
-}
-
-.footer-logo h3 {
-  margin: 0;
-  color: #D4AF37;
-  font-size: 1.1rem;
-}
-
-.footer-brand-info p {
-  font-size: 0.90rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
-}
-
-.services-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 15px;
-  justify-items: center;
-  /* Center content within columns if needed, but centering the block is key */
-}
-
-.services-columns ul {
-  align-items: center;
-  /* Center the list items for a cleaner centered look */
-}
-
-.services-columns ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.services-columns ul li a {
-  text-align: left;
-}
-
-.footer-section {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
 .footer-section h3 {
   color: #D4AF37;
-  margin: 0 0 15px 0;
-  font-size: 1.1rem;
+  margin: 0 0 25px 0;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  line-height: 1.4;
+  letter-spacing: 1.5px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #D4AF37;
 }
 
 .footer-services h3 {
-  text-align: center;
+  text-align: left;
 }
 
-.footer-section p {
-  margin: 0 0 10px 0;
-  color: #BDC3C7;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  word-wrap: break-word;
+.footer-services h3::after {
+  left: 0;
+}
+
+.contact-details p {
+  margin-bottom: 15px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-details strong {
+  color: #D4AF37;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .footer-section p a {
@@ -199,32 +181,40 @@ footer {
 .social-links-centered {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 2px;
-  /* Minimized to the extreme */
+  gap: 25px;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .social-links-centered a {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 10px;
+  background-color: rgba(212, 175, 55, 0.05);
+  padding: 12px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .social-links-centered a:hover {
   background-color: #D4AF37;
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.1);
   border-color: #D4AF37;
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
 }
 
 .social-icon-img {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
+  filter: brightness(0) invert(1); /* Make icons white by default */
+  transition: filter 0.3s ease;
+}
+
+.social-links-centered a:hover .social-icon-img {
+  filter: brightness(0); /* Make icons black/dark on gold hover */
 }
 
 .copyright-bar {
