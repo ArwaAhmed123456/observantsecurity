@@ -255,21 +255,14 @@
   margin-bottom: 40px;
 }
 
-/* Balance 7 items by centering the last one */
-.services-grid .service-card:nth-child(7) {
-  grid-column: 2;
-}
+/* Natural grid flow for all items */
 
 @media (max-width: 992px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .services-grid .service-card:nth-child(7) {
-    grid-column: span 2;
-    max-width: 450px;
-    justify-self: center;
-  }
+/* Natural grid flow on mobile */
 }
 
 
