@@ -493,3 +493,81 @@
     height: 250px;
   }
 }
+
+/* Methodology Section */
+.methodology-section-expert {
+  padding: 100px 0;
+  background: white;
+}
+
+.methodology-header-expert {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.methodology-header-expert h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.process-timeline-expert {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+}
+
+.process-step-expert {
+  position: relative;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.process-step-expert:hover {
+  background: #1B2631;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.step-number-expert {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #D4AF37;
+  opacity: 0.2;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  line-height: 1;
+}
+
+.process-step-expert h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.process-step-expert p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.8;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .process-timeline-expert {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .process-timeline-expert {
+    grid-template-columns: 1fr;
+  }
+}
