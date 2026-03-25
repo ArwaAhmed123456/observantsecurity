@@ -103,6 +103,47 @@ function ServiceDetail() {
         </div>
       </section>
 
+      {/* Methodology / Process Section */}
+      <section className="methodology-section-expert">
+        <div className="container-expert">
+          <div className="methodology-header-expert">
+            <span className="section-tag-expert">Our Methodology</span>
+            <h2>Security Deployment Process</h2>
+            <p>A rigorous, multi-stage approach to ensuring your site's total integrity.</p>
+          </div>
+          <div className="process-timeline-expert">
+            <div className="process-step-expert">
+              <div className="step-number-expert">01</div>
+              <div className="step-content-expert">
+                <h3>Risk Assessment</h3>
+                <p>Comprehensive evaluation of site vulnerabilities, topography, and asset value.</p>
+              </div>
+            </div>
+            <div className="process-step-expert">
+              <div className="step-number-expert">02</div>
+              <div className="step-content-expert">
+                <h3>Technical Design</h3>
+                <p>Custom engineering of CCTV, sensor arrays, and communication infrastructure.</p>
+              </div>
+            </div>
+            <div className="process-step-expert">
+              <div className="step-number-expert">03</div>
+              <div className="step-content-expert">
+                <h3>Elite Guarding</h3>
+                <p>Deployment of SIA-licensed personnel specifically trained for your sector.</p>
+              </div>
+            </div>
+            <div className="process-step-expert">
+              <div className="step-number-expert">04</div>
+              <div className="step-content-expert">
+                <h3>24/7 Monitoring</h3>
+                <p>Triple-redundant remote surveillance with immediate intervention protocols.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Media Gallery Section */}
       {detailedContent.gallery && (
         <section className="gallery-section-expert">

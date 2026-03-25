@@ -169,7 +169,7 @@
 }
 
 .about-section .section-container {
-  max-width: 1400px; /* Increased from 1200px */
+  max-width: 1700px; /* Further expanded for ultra-wide cards */
   padding: 0 40px;
   width: 100%;
   box-sizing: border-box;
@@ -177,8 +177,8 @@
 
 .about-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   margin-top: 50px;
 }
 
@@ -197,7 +197,7 @@
 
 .about-card {
   background-color: white;
-  padding: 25px 30px;
+  padding: 15px 20px; /* Minimal vertical padding for horizontal look */
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -205,14 +205,14 @@
 }
 
 .about-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card-icon {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  height: 120px;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  height: 80px; /* Even shorter icon area */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,9 +225,9 @@
 }
 
 .about-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Slightly smaller for better fit */
   color: #1B2631;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   font-weight: 700;
 }
 

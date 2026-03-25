@@ -54,7 +54,7 @@ const servicesData = [
     description: "Elite security for West Midlands construction sites to prevent theft and project delays.",
     detailedContent: {
       intro: "Professional construction site security guarding and access control in Birmingham, Coventry, and beyond.",
-      longIntro: "Construction sites are dynamic, high-risk environments that demand specialized security expertise. With millions of pounds in plant machinery, raw materials, and tools often left exposed, active development sites are prime targets for both opportunistic and professional thieves. Observant Security is a Midlands-based firm with a decade of experience in protecting critical infrastructure projects. We provide reliable, SIA-licensed staff who understand the nuances of construction logistics, health and safety compliance, and site-specific risk management.",
+      longIntro: "Construction sites are dynamic, high-risk environments that demand specialized security expertise. With millions of pounds in plant machinery, raw materials, and tools often left exposed, active development sites are prime targets for both opportunistic and professional thieves. Observant Security is a leading Midlands-based firm in protecting critical infrastructure projects. We provide reliable, SIA-licensed staff who understand the nuances of construction logistics, health and safety compliance, and site-specific risk management.",
       stats: [
         { label: "Theft Reduction", value: "95%" },
         { label: "Staff Vetting", value: "100%" },

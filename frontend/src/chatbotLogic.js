@@ -3,9 +3,13 @@ const knowledgeBase = {
     keywords: ["hello", "hi", "hey", "hy", "hye", "hii", "helo", "yo", "greeting", "good morning", "good afternoon"],
     response: "Hello! I'm the Observant Security Assistant. How can I help you today? I can provide details on our specialized security services, our expertise in Solar Farm protection, or help you get a quote."
   },
+  status: {
+    keywords: ["how are you", "hows it going", "how r u", "how are u", "u okay", "everything good"],
+    response: "I'm doing great, thank you for asking! I'm ready to help you secure your site. What can I tell you about our security solutions today?"
+  },
   identity: {
     keywords: ["who are you", "who is observant", "about the company", "tell me about", "background", "experience", "how long"],
-    response: "Observant Security is a professional, service-driven security firm with over 10 years of experience in protecting critical assets across the UK. Based in the West Midlands (Birmingham & Coventry), we specialize in high-stakes security for Solar Farms, Construction Sites, and Corporate environments using SIA-licensed elite personnel."
+    response: "Observant Security is a professional, service-driven security firm and leading specialists in protecting critical assets across the UK. Based in the West Midlands (Birmingham & Coventry), we specialize in high-stakes security for Solar Farms, Construction Sites, and Corporate environments using SIA-licensed elite personnel."
   },
   location: {
     keywords: ["location", "where are you", "base", "areas", "birmingham", "coventry", "midlands", "london", "uk", "nationwide"],
