@@ -16,6 +16,7 @@ import Trainings from "./Trainings";
 import Footer from "./Footer";
 import ChatBot from "./ChatBot";
 import ScrollToTop from "./ScrollToTop";
+import BrochurePage from "./BrochurePage";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/news/:newsId" element={<News />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/trainings" element={<Trainings />} />
+          <Route path="/brochure" element={<BrochurePage />} />
         </Routes>
         <Footer />
         <ChatBot />

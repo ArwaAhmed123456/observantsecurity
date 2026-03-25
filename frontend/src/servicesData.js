@@ -1,7 +1,7 @@
 const servicesData = [
   {
     title: "Solar Farm Security",
-    image: "/solar_1.jpeg",
+    image: "/original/solar_1.jpeg",
     description: "Comprehensive security solutions for solar energy installations across the UK.",
     detailedContent: {
       intro: "Securing the future of renewable energy with advanced surveillance and rapid response.",
@@ -17,12 +17,19 @@ const servicesData = [
         { title: "Advanced Thermal Imaging", description: "Our state-of-the-art thermal cameras provide total situational awareness, detecting human heat signatures from over 1km away in complete darkness or fog.", icon: "fa-eye" },
         { title: "Smart Perimeter Detection", description: "We implement advanced fence-line vibration sensors and ground-based radar that provide instant, pinpoint alerts to our 24/7 monitoring center.", icon: "fa-shield-alt" },
         { title: "Rapid Response Deployment", description: "In the event of a perimeter breach, our SIA-licensed rapid response teams are dispatched immediately in all-terrain vehicles to intercept intruders.", icon: "fa-helicopter" }
+      ],
+      gallery: [
+        { type: "image", src: "/original/solar_1.jpeg", alt: "Solar Panel Inspection" },
+        { type: "image", src: "/original/solar_2.jpeg", alt: "Solar Farm Perimeter" },
+        { type: "image", src: "/original/original_solar_security_image.jpeg", alt: "Site Security Setup" },
+        { type: "video", src: "/original/solar_3.mp4", alt: "Surveillance Demonstration" },
+        { type: "video", src: "/original/solar_4.mp4", alt: "Security Patrol" }
       ]
     }
   },
   {
     title: "CCTV Security",
-    image: "/8.CCTV.png",
+    image: "/Services/8.CCTV.png",
     description: "24/7 Monitored surveillance systems with rapid intervention capabilities.",
     detailedContent: {
       intro: "Advanced visual surveillance and proactive remote monitoring for total property protection.",
@@ -43,7 +50,7 @@ const servicesData = [
   },
   {
     title: "Construction Security",
-    image: "/original_site_security_image_1.jpeg",
+    image: "/original/original_site_security_image_1.jpeg",
     description: "Elite security for West Midlands construction sites to prevent theft and project delays.",
     detailedContent: {
       intro: "Professional construction site security guarding and access control in Birmingham, Coventry, and beyond.",
@@ -64,7 +71,7 @@ const servicesData = [
   },
   {
     title: "Corporate Security",
-    image: "/4.CorporateSecurity.png",
+    image: "/Services/4.CorporateSecurity.png",
     description: "Bespoke security and concierge services for professional business environments.",
     detailedContent: {
       intro: "Elite protection and professional representation for your corporate assets, staff, and visitors.",
@@ -85,13 +92,13 @@ const servicesData = [
   },
   {
     title: "Event Security",
-    image: "/3.MannedGuarding.png",
+    image: "/Services/3.MannedGuarding.png",
     description: "Expert crowd management and venue security for events of all scales.",
     detailedContent: {
       intro: "Ensuring safe, secure, and successful events in the UK with expert crowd management.",
       longIntro: "Hosting a successful event requires meticulous planning, especially when it comes to the safety of your guests. Whether it's a high-profile corporate product launch, a wedding, or a large-scale public festival, the security challenges are diverse. Observant Security provides comprehensive event management solutions that handle everything from initial risk assessment to real-time crowd control. Our team is trained to handle large volumes of people with professionalism, ensuring that the atmosphere remains positive while safety protocols are strictly followed.",
       stats: [
-        { label: "Large Events", value: "500+" },
+        { label: "Reliability", value: "High" },
         { label: "Safety Success", value: "100%" },
         { label: "SIA Licensed", value: "100%" }
       ],
@@ -106,7 +113,7 @@ const servicesData = [
   },
   {
     title: "Mobile Security",
-    image: "/2.CarPatrolling.png",
+    image: "/Services/2.CarPatrolling.png",
     description: "Rapid, randomized patrols providing cost-effective visual deterrence for your property.",
     detailedContent: {
       intro: "Randomized, high-visibility vehicle patrols to protect vacant assets and high-risk zones.",
@@ -127,7 +134,7 @@ const servicesData = [
   },
   {
     title: "Warehouses Security",
-    image: "/10.Warehouse.png",
+    image: "/Services/10.Warehouse.png",
     description: "Specialized logistics and distribution security to protect your global supply chain.",
     detailedContent: {
       intro: "Safeguarding your distribution hubs with expert gatehouse control and internal inspections.",
@@ -143,6 +150,27 @@ const servicesData = [
         { title: "HGV Gatehouse Management", description: "Strict monitoring of all vehicle movements, manifest verification, and security seal inspections for every incoming and outgoing load.", icon: "fa-truck-loading" },
         { title: "Internal Inventory Patrols", description: "Constant, discrete monitoring of high-value storage areas and loading bays to prevent unauthorized stock movement or internal theft.", icon: "fa-boxes" },
         { title: "Loading Bay Supervision", description: "Supervising the loading process to ensure that security protocols are followed and that the correct assets are placed on the correct vehicles.", icon: "fa-lock" }
+      ]
+    }
+  },
+  {
+    title: "Security Subcontracting",
+    image: "/Pages%20Images/CIA_Licensed.png",
+    description: "Reliable, SIA-licensed subcontract security services for firms across the UK.",
+    detailedContent: {
+      intro: "Elite subcontracting solutions for security firms requiring professional SIA personnel.",
+      longIntro: "Observant Security specialist in providing reliable, SIA-licensed subcontract security services. We understand the pressure of managing multiple sites and the critical need for dependable staff. Our team serves as a high-quality extension of your own workforce, maintaining your reputation with the same level of professionalism and dedication to safety that you provide to your own clients.",
+      stats: [
+        { label: "SIA Licensed", value: "100%" },
+        { label: "Rapid Fill", value: "<2h" },
+        { label: "Compliance", value: "Full" }
+      ],
+      whyTitle: "Why Partner with Observant for Subcontracting?",
+      whyText: "The security industry often faces sudden surges in demand or unexpected staff shortages. Finding reliable, vetted, and professional officers at short notice is a major challenge. Our subcontracting division is designed specifically to fill these gaps without compromising on quality. We don't just provide 'warm bodies'—we provide trained professionals who integrate seamlessly into your operational protocols and represent your brand with excellence.",
+      features: [
+        { title: "Fully Vetted Personnel", description: "All subcontracted officers undergo rigorous vetting and background checks, exceeding standard SIA requirements for your peace of mind.", icon: "fa-certificate" },
+        { title: "Seamless Integration", description: "Our staff are trained to quickly adapt to diverse site-specific instructions and client cultures, ensuring a 'white-label' experience for your customers.", icon: "fa-sync-alt" },
+        { title: "24/7 Availability", description: "Whether it's an emergency last-minute cover or a long-term deployment, our team is ready to support your firm around the clock.", icon: "fa-clock" }
       ]
     }
   }

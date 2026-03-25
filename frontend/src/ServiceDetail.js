@@ -20,15 +20,15 @@ function ServiceDetail() {
   const { detailedContent } = service;
 
   const accreditationLogos = [
-    '/contracters_logo_1.png',
-    '/contracters_logo_2.png',
-    '/contracters_logo_3.png',
-    '/contracters_logo_4.png',
-    '/contracters_logo_5.png',
-    '/contracters_logo_6.png',
-    '/contracters_logo_7.png',
-    '/contracters_logo_8.png',
-    '/contracters_logo_9.png'
+    '/license images/contracters_logo_1.png',
+    '/license images/contracters_logo_2.png',
+    '/license images/contracters_logo_3.png',
+    '/license images/contracters_logo_4.png',
+    '/license images/contracters_logo_5.png',
+    '/license images/contracters_logo_6.png',
+    '/license images/contracters_logo_7.png',
+    '/license images/contracters_logo_8.png',
+    '/license images/contracters_logo_9.png'
   ];
 
   return (
@@ -103,6 +103,33 @@ function ServiceDetail() {
         </div>
       </section>
 
+      {/* Media Gallery Section */}
+      {detailedContent.gallery && (
+        <section className="gallery-section-expert">
+          <div className="container-expert">
+            <div className="section-header-expert">
+              <h2>Project Gallery & Media</h2>
+              <p>Visual demonstration of our security installations and operational capabilities.</p>
+            </div>
+            <div className="gallery-grid-expert">
+              {detailedContent.gallery.map((item, idx) => (
+                <div key={idx} className="gallery-item-expert">
+                  {item.type === 'image' ? (
+                    <img src={process.env.PUBLIC_URL + item.src} alt={item.alt} loading="lazy" />
+                  ) : (
+                    <video controls muted preload="metadata">
+                      <source src={process.env.PUBLIC_URL + item.src} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
+                  <div className="gallery-caption-expert">{item.alt}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Accreditations Section */}
       <section className="accreditations-section-expert">
         <div className="container-expert">
@@ -113,11 +140,11 @@ function ServiceDetail() {
           <div className="accreditation-marquee-expert">
             <div className="marquee-content-expert">
               {accreditationLogos.map((logo, idx) => (
-                <img key={idx} src={process.env.PUBLIC_URL + logo} alt="Accreditation" />
+                <img key={idx} src={process.env.PUBLIC_URL + logo} alt="Accreditation" loading="lazy" />
               ))}
               {/* Duplicate for seamless loop */}
               {accreditationLogos.map((logo, idx) => (
-                <img key={`dup-${idx}`} src={process.env.PUBLIC_URL + logo} alt="Accreditation" />
+                <img key={`dup-${idx}`} src={process.env.PUBLIC_URL + logo} alt="Accreditation" loading="lazy" />
               ))}
             </div>
           </div>

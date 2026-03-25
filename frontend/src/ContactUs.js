@@ -66,7 +66,7 @@ function Contact() {
       <div
         className="contact-hero"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL + '/31.png'})`,
+          backgroundImage: `url(${process.env.PUBLIC_URL + '/Pages%20Images/31.png'})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -93,7 +93,7 @@ function Contact() {
       <div className="contact-form-section">
         <div className="form-container">
           <div className="form-left">
-            <img src="/Questions-pana.png" alt="Contact Questions" className="contact-form-img" />
+            <img src="/Pages%20Images/Questions-pana.png" alt="Contact Us" className="contact-form-img" loading="lazy" />
             <p className="feel-free">Feel Free to Contact Us</p>
             <p>Please fill in our short form and a member of our team will be in touch within 60 min.</p>
           </div>

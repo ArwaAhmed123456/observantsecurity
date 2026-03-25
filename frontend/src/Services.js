@@ -10,7 +10,7 @@ function Services() {
       <div
         className="services-hero"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL + '/31.png'})`,
+          backgroundImage: `url(${process.env.PUBLIC_URL + '/Pages%20Images/31.png'})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

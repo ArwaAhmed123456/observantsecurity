@@ -6,14 +6,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
-    background-color: rgba(0, 0, 0, 0.85);
+    padding: 0 30px 0 20px;
+    background-color: #1B2631;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
-    height: 95px; /* Boosted slightly */
+    height: 85px;
     transition: background-color 0.3s ease;
 }
 
@@ -21,10 +21,11 @@ body {
     flex: 1;
     display: flex;
     justify-content: flex-start;
+    padding-left: 10px;
 }
 
 .nav-center {
-    flex: 1;
+    flex: 2;
     display: flex;
     justify-content: center;
 }
@@ -34,7 +35,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
 }
 
 .navbar.scrolled {
@@ -52,7 +53,7 @@ body {
 }
 
 .logo img {
-    height: 65px; /* Boosted for impact */
+    height: 55px; /* Proportional logo size */
     padding: 5px 0;
     width: auto;
     object-fit: contain;
@@ -68,7 +69,7 @@ body {
 
 .brand-top {
     color: #fff;
-    font-size: 1.8rem; /* Boosted from 1.5rem */
+    font-size: 1.6rem; 
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -91,7 +92,7 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
     flex: 1;
 }
@@ -103,7 +104,7 @@ body {
 .nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.1rem; /* Boosted from 0.95rem */
+    font-size: 1.05rem; 
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -125,7 +126,7 @@ body {
 .nav-auth-links li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.1rem; /* Boosted from 0.95rem */
+    font-size: 1.05rem; 
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -147,6 +148,20 @@ body {
 .nav-auth-links li a.nav-register-btn.active {
     background-color: #D4AF37;
     color: #1B2631;
+}
+
+/* Brochure link in nav */
+.nav-links .brochure-nav-link {
+    color: #D4AF37 !important;
+    font-weight: 700 !important;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.nav-links .brochure-nav-link:hover {
+    background-color: #D4AF37;
+    color: #1B2631 !important;
 }
 
 .mobile-only-auth {

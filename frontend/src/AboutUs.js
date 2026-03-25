@@ -9,7 +9,7 @@ function AboutUs() {
       <div
         className="about-hero"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL + '/31.png'})`,
+          backgroundImage: `url(${process.env.PUBLIC_URL + '/Pages%20Images/31.png'})`,
         }}
       >
         <div className="hero-overlay"></div>
@@ -27,7 +27,7 @@ function AboutUs() {
         <div className="section-content">
           <h2>Our Story</h2>
           <p>
-            Observant Security Solution was formed in 2000 in response to the need for a security company with a service-driven approach. Since then, the growth of Observant and its client base has been developed due to excellent service delivery and referral. We have built our reputation on delivering exceptional service and genuine care for our clients' safety and security.
+            Observant Security Solution is a professional, service-driven security company dedicated to meeting the complex safety needs of modern businesses. Our growth and reputation have been built through excellent service delivery and genuine care for our clients' security. We pride ourselves on the long-term relationships we maintain with our partners across the UK.
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ function AboutUs() {
       {/* Philosophy, Ethics and Principles Section — TEXT LEFT, IMAGE RIGHT */}
       <section className="about-section image-content-section reverse">
         <div className="section-image">
-          <img src="/AboutUs1.jpeg" alt="Philosophy and Ethics" />
+          <img src="/Pages%20Images/AboutUs1.jpeg" alt="Philosophy and Ethics" loading="lazy" />
         </div>
         <div className="section-content">
           <h2>Philosophy, Ethics and Principles</h2>
@@ -62,7 +62,7 @@ function AboutUs() {
       {/* Our Process Section */}
       <section className="about-section image-content-section">
         <div className="section-image">
-          <img src="/AboutUs2.jpg" alt="CCTV Monitoring" />
+          <img src="/Pages%20Images/AboutUs2.jpg" alt="CCTV Monitoring" loading="lazy" />
         </div>
         <div className="section-content">
           <h2>Our Process</h2>
@@ -75,7 +75,7 @@ function AboutUs() {
       {/* Our Business Relations Section */}
       <section className="about-section image-content-section reverse">
         <div className="section-image">
-          <img src="/AboutUs3.png" alt="Mobile Patrol" />
+          <img src="/Pages%20Images/AboutUs3.png" alt="Our Business Relations" loading="lazy" />
         </div>
         <div className="section-content">
           <h2>Our Business Relations</h2>
@@ -86,7 +86,7 @@ function AboutUs() {
       </section>
 
       {/* Brochure Section */}
-      <section className="about-section brochure-section">
+      <section id="brochure" className="about-section brochure-section">
         <div className="section-container">
           <div className="section-header" style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2>Our Company Brochure</h2>
@@ -99,7 +99,7 @@ function AboutUs() {
           <div className="brochure-display" style={{ 
             display: 'flex', 
             gap: '30px', 
-            justify-content: 'center', 
+            justifyContent: 'center', 
             flexWrap: 'wrap',
             padding: '20px'
           }}>
@@ -110,7 +110,7 @@ function AboutUs() {
               borderRadius: '8px',
               overflow: 'hidden'
             }}>
-              <img src="/broucher/broucher_frontside.jpeg" alt="Brochure Front" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/broucher/broucher_frontside.jpeg" alt="Brochure Front" style={{ width: '100%', height: 'auto', display: 'block' }} loading="lazy" />
             </div>
             <div className="brochure-page" style={{ 
               flex: '1', 
@@ -119,7 +119,7 @@ function AboutUs() {
               borderRadius: '8px',
               overflow: 'hidden'
             }}>
-              <img src="/broucher/broucher_backside.jpeg" alt="Brochure Back" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/broucher/broucher_backside.jpeg" alt="Brochure Back" style={{ width: '100%', height: 'auto', display: 'block' }} loading="lazy" />
             </div>
           </div>
         </div>

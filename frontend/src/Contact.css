@@ -6,13 +6,16 @@
 }
 
 .contact-hero {
+  height: 400px;
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
-  padding: 135px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  margin-top: 90px;
+  margin-top: 85px;
 }
 
 .contact-hero::before {

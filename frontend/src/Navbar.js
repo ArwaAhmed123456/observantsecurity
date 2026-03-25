@@ -58,6 +58,7 @@ const Navbar = () => {
                     <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
                     <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={() => setMenuOpen(false)}>About Us</Link></li>
                     <li><Link to="/faq" className={location.pathname === '/faq' ? 'active' : ''} onClick={() => setMenuOpen(false)}>FAQ</Link></li>
+                    <li><Link to="/brochure" className={location.pathname === '/brochure' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Brochure</Link></li>
 
                     {/* Render auth links in the center menu ONLY for mobile, using a special class */}
                     <div className="mobile-only-auth">

@@ -49,16 +49,16 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="social-links-centered">
           <a href="https://www.linkedin.com/company/observant-security-ltd/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <img src="/linkedin.png" alt="LinkedIn" className="social-icon-img" />
+            <img src="/Socalmedia Icons/linkedin.png" alt="LinkedIn" className="social-icon-img" loading="lazy" />
           </a>
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <img src="/facebook.png" alt="Facebook" className="social-icon-img" />
+            <img src="/Socalmedia Icons/facebook.png" alt="Facebook" className="social-icon-img" loading="lazy" />
           </a>
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <img src="/instagram.png" alt="Instagram" className="social-icon-img" />
+            <img src="/Socalmedia Icons/instagram.png" alt="Instagram" className="social-icon-img" loading="lazy" />
           </a>
           <a href="https://wa.me/+447925127201" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <img src="/whattsup.png" alt="WhatsApp" className="social-icon-img" />
+            <img src="/Socalmedia Icons/whattsup.png" alt="WhatsApp" className="social-icon-img" loading="lazy" />
           </a>
         </div>
 

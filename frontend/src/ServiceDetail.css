@@ -16,7 +16,8 @@
 /* Hero Section */
 .service-hero-expert {
   position: relative;
-  height: 60vh;
+  height: calc(60vh - 85px);
+  margin-top: 85px;
   min-height: 400px;
   background-size: cover;
   background-position: center;

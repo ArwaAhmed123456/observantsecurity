@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
       {/* Hero Section */}
-      <div className="hero" style={{ backgroundImage: "url('/1.bg.png')" }}>
+      <div className="hero" style={{ backgroundImage: "url('/Hero%20page/1.bg.png')" }}>
         <div className="overlay"></div>
         <div className="content">
           <h1>Professional Security Solutions Across the UK</h1>
@@ -41,36 +41,37 @@ function Home() {
             <span className="section-tag">ABOUT US</span>
             <h2>Observant Security - Your Trusted Security Provider</h2>
             <p className="section-description">
-              Observant Security Solution was formed in 2000 in response to the need for a security company
-              with a service-driven approach. We provide professional, reliable security solutions to businesses
-              across the UK, ensuring your assets, people, and premises are protected 24/7.
+              Observant Security Solution is a professional, service-driven security company
+              dedicated to providing reliable solutions across the UK. As leading specialists in
+              <span className="highlight-text">Solar Farm Security</span> and renewable energy asset protection, 
+              we focus on safeguarding your property, people, and premises with 24/7 elite SIA licensed personnel.
             </p>
           </div>
           <div className="about-cards">
             <div className="about-card">
               <div className="card-icon">
-                <img src="/CIA_Licensed.png" alt="SIA Licensed Security Officers" />
+                <img src="/Pages%20Images/CIA_Licensed.png" alt="SIA Licensed Security Officers" loading="lazy" />
               </div>
               <h3>SIA Licensed Security Officers</h3>
               <p>All our security personnel are fully SIA licensed and professionally trained to the highest standards.</p>
             </div>
             <div className="about-card">
               <div className="card-icon">
-                <img src="/tailored_Sol.png" alt="Integrated Security Solutions" />
+                <img src="/Pages%20Images/tailored_Sol.png" alt="Integrated Security Solutions" loading="lazy" />
               </div>
               <h3>Integrated Security Solutions</h3>
               <p>Specialist CCTV Tower surveillance & static guarding for comprehensive site protection.</p>
             </div>
             <div className="about-card">
               <div className="card-icon">
-                <img src="/247Avalilability.png" alt="24/7 Availability" />
+                <img src="/Pages%20Images/247Avalilability.png" alt="24/7 Availability" loading="lazy" />
               </div>
               <h3>24/7 Availability</h3>
               <p>Round-the-clock security services with rapid response times across the UK.</p>
             </div>
             <div className="about-card">
               <div className="card-icon">
-                <img src="/ExperiencedTeam.png" alt="Fast-Growing Company" />
+                <img src="/Pages%20Images/ExperiencedTeam.png" alt="Fast-Growing Company" loading="lazy" />
               </div>
               <h3>Fast-Growing Company</h3>
               <p>Committed to excellence in providing tailored security solutions to diverse industries across the UK.</p>
@@ -94,7 +95,7 @@ function Home() {
             {featuredServices.map((service, index) => (
               <Link to={`/service/${index}`} key={index} className="service-card">
                 <div className="service-image">
-                  <img src={service.image} alt={service.title} />
+                  <img src={service.image} alt={service.title} loading="lazy" />
                   <div className="service-overlay"></div>
                 </div>
                 <div className="service-content">
@@ -123,28 +124,28 @@ function Home() {
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/Rapid_response.png" alt="Complimentary Tech Deployment" />
+                <img src="/Pages%20Images/Rapid_response.png" alt="Complimentary Tech Deployment" />
               </div>
               <h3>Complimentary Tech Deployment</h3>
               <p>Ask about our Free 30-Day Portable Camera trial for new solar farm contracts.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/ExperiencedTeam.png" alt="Night-Vision Superiority" />
+                <img src="/Pages%20Images/ExperiencedTeam.png" alt="Night-Vision Superiority" />
               </div>
               <h3>Night-Vision Superiority</h3>
               <p>Specialist optics for 24/7 perimeter monitoring in remote, unlit locations.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/tailored_Sol.png" alt="Body-Cam Accountability" />
+                <img src="/Pages%20Images/tailored_Sol.png" alt="Body-Cam Accountability" />
               </div>
               <h3>Body-Cam Accountability</h3>
               <p>Transparent, recorded patrolling for maximum site security and legal protection.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/Competitive_pricing.png" alt="Active Visual Deterrence" />
+                <img src="/Pages%20Images/Competitive_pricing.png" alt="Active Visual Deterrence" />
               </div>
               <h3>Active Visual Deterrence</h3>
               <p>High-intensity beacon systems to signal a high-security presence to potential trespassers.</p>
@@ -187,37 +188,37 @@ function Home() {
           <div className="industries-grid">
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Construction_icon_Home_page.png" alt="Construction" />
+                <img src="/Pages%20Images/Construction_icon_Home_page.png" alt="Construction" />
               </div>
               <h3>Construction</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Corporate_icon_Home_page.png" alt="Corporate" />
+                <img src="/Pages%20Images/Corporate_icon_Home_page.png" alt="Corporate" />
               </div>
               <h3>Corporate</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Retaild_icon_Home_page.png" alt="Retail" />
+                <img src="/Pages%20Images/Retaild_icon_Home_page.png" alt="Retail" />
               </div>
               <h3>Retail</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Warehouse_icon_Home_page.png" alt="Warehouses" />
+                <img src="/Pages%20Images/Warehouse_icon_Home_page.png" alt="Warehouses" />
               </div>
               <h3>Warehouses</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Event_icon_Home_page.png" alt="Events" />
+                <img src="/Pages%20Images/Event_icon_Home_page.png" alt="Events" />
               </div>
               <h3>Events</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Solar_icon_Home_page.png" alt="Solar Farms" />
+                <img src="/Services/24.solarfarms.png" alt="Solar Farms" />
               </div>
               <h3>Solar Farms</h3>
             </div>
@@ -237,28 +238,28 @@ function Home() {
               {[...Array(2)].map((_, i) => (
                 <React.Fragment key={i}>
                   <a href="https://www.chas.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-                    <img src="/contracters_logo_1.png" alt="CHAS Contractor" />
+                    <img src="/license images/contracters_logo_1.png" alt="CHAS Contractor" />
                   </a>
                   <a href="https://www.alcumus.com/safecontractor" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-                    <img src="/contracters_logo_2.png" alt="SafeContractor" />
+                    <img src="/license images/contracters_logo_2.png" alt="SafeContractor" />
                   </a>
                   <a href="https://www.constructionline.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-                    <img src="/contracters_logo_3.png" alt="Constructionline" />
+                    <img src="/license images/contracters_logo_3.png" alt="Constructionline" />
                   </a>
                   <a href="https://www.gov.uk/government/organisations/security-industry-authority" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-                    <img src="/contracters_logo_4.png" alt="SIA Approved Contractor" />
+                    <img src="/license images/contracters_logo_4.png" alt="SIA Approved Contractor" />
                   </a>
                   <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/contracters_logo_5.png" alt="Accreditation Logo" />
+                    <img src="/license images/contracters_logo_5.png" alt="Accreditation Logo" />
                   </div>
                   <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/contracters_logo_6.png" alt="Accreditation Logo" />
+                    <img src="/license images/contracters_logo_6.png" alt="Accreditation Logo" />
                   </div>
                   <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/contracters_logo_7.png" alt="Accreditation Logo" />
+                    <img src="/license images/contracters_logo_7.png" alt="Accreditation Logo" />
                   </div>
                   <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/contracters_logo_8.png" alt="Accreditation Logo" />
+                    <img src="/license images/contracters_logo_8.png" alt="Accreditation Logo" />
                   </div>
                 </React.Fragment>
               ))}

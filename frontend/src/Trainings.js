@@ -5,7 +5,17 @@ import './About.css';
 const Trainings = () => {
     return (
         <div className="about-container">
-            <div className="about-hero" style={{ background: '#1B2631', height: '40vh' }}>
+            <div className="about-hero" style={{ 
+                backgroundImage: `url(${process.env.PUBLIC_URL + '/Pages%20Images/31.png'})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '400px',
+                marginTop: '85px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
+                <div className="hero-overlay"></div>
                 <div className="hero-content">
                     <h1>Security Standards & Trainings</h1>
                     <p>We adhere to the highest UK security standards including BS7858, BS10800, and BS99.</p>

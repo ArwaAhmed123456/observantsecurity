@@ -41,7 +41,7 @@ const FAQ = () => {
 
     return (
         <div className="faq-page">
-            <div className="faq-hero">
+            <div className="faq-hero" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/Pages%20Images/31.png'})` }}>
                 <div className="hero-overlay"></div>
                 <h1>Frequently Asked Questions</h1>
                 <p>Everything you need to know about our professional security services and standards.</p>
