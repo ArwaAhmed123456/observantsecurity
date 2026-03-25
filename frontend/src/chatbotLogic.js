@@ -1,54 +1,73 @@
 const knowledgeBase = {
   greetings: {
     keywords: ["hello", "hi", "hey", "hy", "hye", "hii", "helo", "yo", "greeting", "good morning", "good afternoon"],
-    response: "Hello! I'm the Observant Assistant. How can I help you today? You can ask me about our security services, our company, or how to get a quote."
+    response: "Hello! I'm the Observant Security Assistant. How can I help you today? I can provide details on our specialized security services, our expertise in Solar Farm protection, or help you get a quote."
   },
-  services: {
-    keywords: ["services", "what do you do", "provide", "offer"],
-    response: "We provide professional security solutions across the UK, including Solar Farm Security, CCTV Monitoring, Construction Site Security, Corporate Security, Event Security, Mobile Patrols, and Warehouse Security. Which area are you interested in?"
+  identity: {
+    keywords: ["who are you", "who is observant", "about the company", "tell me about", "background", "experience", "how long"],
+    response: "Observant Security is a professional, service-driven security firm with over 10 years of experience in protecting critical assets across the UK. Based in the West Midlands (Birmingham & Coventry), we specialize in high-stakes security for Solar Farms, Construction Sites, and Corporate environments using SIA-licensed elite personnel."
+  },
+  location: {
+    keywords: ["location", "where are you", "base", "areas", "birmingham", "coventry", "midlands", "london", "uk", "nationwide"],
+    response: "We are headquartered in the West Midlands, primarily serving Birmingham, Coventry, and the surrounding areas. However, we provide comprehensive security solutions NATIONWIDE across the UK for large-scale projects like solar farms and industrial logistics."
   },
   solar: {
-    keywords: ["solar", "farm", "renewable", "panels"],
-    response: "We are specialists in Solar Farm Security and renewable energy asset protection. We provide 24/7 protection, smart perimeter detection, and rapid response deployment. Would you like to see more details on our Services page?"
+    keywords: ["solar", "farm", "renewable", "panels", "energy", "copper", "theft", "cabling"],
+    response: "We are UK specialists in Solar Farm Security. We protect your assets with: \n• 24/7 thermal imaging (1km+ detection)\n• Smart perimeter vibration sensors\n• Rapid response teams in all-terrain vehicles\n• 100% asset protection history. \nWould you like to speak to a solar security specialist?"
   },
   cctv: {
-    keywords: ["cctv", "camera", "monitor", "surveillance"],
-    response: "Our CCTV solutions include 24/7 proactive monitoring by SIA-licensed professionals, HD/4K recording, and AI-powered analytics. We provide real-time intervention to prevent crimes before they happen."
+    keywords: ["cctv", "camera", "monitor", "surveillance", "remote", "audio", "warning"],
+    response: "Our CCTV systems aren't just for recording—they are for active intervention. Our SIA-licensed operators provide 24/7 proactive monitoring with live audio warnings that stop 95% of crimes before they happen. We also use AI analytics to filter out false alarms."
   },
   construction: {
-    keywords: ["construction", "building", "site", "developer"],
-    response: "We provide elite construction site security, including manned guarding and strict access control to prevent theft of plant machinery and materials. We're very active in the West Midlands and across the UK."
+    keywords: ["construction", "site", "building", "developer", "machinery", "plant", "theft"],
+    response: "We secure construction projects throughout the Midlands and the UK. Our guards manage strict access control and 24/7 perimeter patrols to prevent the theft of high-value plant machinery and raw materials, keeping your project on schedule."
   },
-  sia: {
-    keywords: ["sia", "licensed", "badge", "guards"],
-    response: "All our security officers are 100% SIA licensed and fully vetted. We maintain the highest industry standards for your safety and peace of mind."
+  corporate: {
+    keywords: ["corporate", "office", "business", "concierge", "reception", "hospitality"],
+    response: "Our corporate security blends elite protection with professional hospitality. Our officers are hospitality-trained to manage front-of-house concierge while maintaining rigorous security protocols for your staff and sensitive data."
   },
-  about: {
-    keywords: ["about", "who are you", "mission", "story"],
-    response: "Observant Security is a professional, service-driven security company dedicated to meeting the complex safety needs of modern businesses. Our mission is to provide a secure environment for our clients and the community."
+  mobile: {
+    keywords: ["mobile", "patrol", "vehicle", "van", "random", "deterrent", "door", "lock"],
+    response: "Our Mobile Patrols provide high-visibility, GPS-tracked vehicle tours at randomized intervals. It's a cost-effective way to secure multiple entrances and detect issues like leaks or forced entry through psychological deterrence."
+  },
+  warehouses: {
+    keywords: ["warehouse", "logistics", "distribution", "hub", "inventory", "gatehouse", "hgv"],
+    response: "For warehouses, we focus on gatehouse integrity and inventory transparency. We audit HGV manifests, check vehicle seals, and conduct internal patrols to stop shrinkage and secure your global supply chain."
+  },
+  vetted: {
+    keywords: ["sia", "licensed", "badge", "vetted", "training", "guards", "officers", "personnel"],
+    response: "Trust is paramount. Every single Observant Security officer is 100% SIA licensed, fully vetted, and trained to the highest industry standards. We don't just provide guards; we provide professional safety specialists."
   },
   contact: {
-    keywords: ["contact", "call", "email", "quote", "price", "cost"],
-    response: "You can request a free quote by clicking 'GET A QUOTE' at the top of the page, or visit our Contact Us page. We're also available 24/7 for our contract clients."
+    keywords: ["contact", "call", "email", "quote", "price", "cost", "hire", "get a quote", "phone"],
+    response: "You can reach us 24/7 at +44 7446 084868. Alternatively, click the 'GET A QUOTE' button at the top of our website to receive a tailored security proposal for your site."
   },
   brochure: {
-    keywords: ["brochure", "profile", "download", "pdf"],
-    response: "You can view and download our full company brochure on our dedicated Brochure page. It has all the details on our services and standards."
+    keywords: ["brochure", "profile", "download", "pdf", "info", "details"],
+    response: "You can download our full company brochure on our dedicated Brochure page. It contains detailed case studies, service breakdowns, and our technical standards."
   },
   thanks: {
-    keywords: ["thanks", "thank you", "great", "awesome", "bye"],
-    response: "You're very welcome! Feel free to ask if you have any more questions. Stay safe!"
+    keywords: ["thanks", "thank you", "great", "awesome", "perfect", "bye", "goodbye"],
+    response: "You're very welcome! Feel free to reach out if you have any more questions about your security needs. Stay safe!"
   }
 };
 
+/**
+ * Enhanced response logic with multi-keyword matching and fallbacks.
+ */
 export const getBotResponse = (input) => {
-  const lowerInput = input.toLowerCase();
+  if (!input) return "I'm sorry, I didn't catch that. How can I help you with your security needs?";
   
+  const cleanInput = input.toLowerCase().replace(/[?.,!]/g, "").trim();
+  
+  // Try to find the best matching category
   for (const category in knowledgeBase) {
-    if (knowledgeBase[category].keywords.some(keyword => lowerInput.includes(keyword))) {
+    if (knowledgeBase[category].keywords.some(keyword => cleanInput.includes(keyword))) {
       return knowledgeBase[category].response;
     }
   }
   
-  return "That's a great question. While I'm just a virtual assistant, one of our security specialists would be happy to give you a detailed answer. Would you like to visit our Contact page or call our 24/7 support?";
+  // Smart fallback
+  return "That's an important question. While I can answer most things about our services, for specific site requirements, I recommend speaking directly with one of our security specialists. You can call us 24/7 at +44 7446 084868 or use the 'GET A QUOTE' form.";
 };

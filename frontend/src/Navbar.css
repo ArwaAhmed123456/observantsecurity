@@ -63,8 +63,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 0.9;
-    /* Tight for official look */
+    line-height: 1.1; /* Increased for better word separation */
 }
 
 .brand-top {
@@ -74,6 +73,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: 'Inter', sans-serif;
+    margin-bottom: 2px; /* Slight lift */
 }
 
 .brand-bottom {
@@ -82,8 +82,7 @@ body {
     font-weight: 400;
     letter-spacing: 4px;
     text-transform: uppercase;
-    margin-top: -2px;
-    /* Pull closer to 'Observant' */
+    margin-top: 2px; /* Pushed lower as requested */
 }
 
 .nav-links {
@@ -187,6 +186,8 @@ body {
 
 .cta-button:hover {
     background: #F39C12;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
 }
 
 /* Hamburger menu styles */
