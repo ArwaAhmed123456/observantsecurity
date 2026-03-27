@@ -167,8 +167,8 @@ function Home() {
               <div className="stat-label">Client Satisfaction Guaranteed</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">ALWAYS ON</div>
-              <div className="stat-label">24/7 Rapid Response</div>
+              <div className="stat-number">24/7</div>
+              <div className="stat-label">Rapid Response Protection</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">LICENSED</div>
