@@ -172,7 +172,7 @@ function Home() {
             </div>
             <div className="stat-card">
               <div className="stat-number">LICENSED</div>
-              <div className="stat-label">SIA Licensed Subcontractor</div>
+              <div className="stat-label">SIA Licensed Security Officers</div>
             </div>
           </div>
         </div>
