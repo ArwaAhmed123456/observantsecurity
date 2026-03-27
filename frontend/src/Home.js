@@ -159,20 +159,20 @@ function Home() {
         <div className="section-container">
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number">UK</div>
-              <div className="stat-label">NATIONWIDE COVERAGE</div>
+              <div className="stat-number">UK-WIDE</div>
+              <div className="stat-label">Operations Nationwide</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">100%</div>
-              <div className="stat-label">CLIENT SATISFACTION</div>
+              <div className="stat-number">EXCELLENCE</div>
+              <div className="stat-label">Client Satisfaction Guaranteed</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">24/7</div>
-              <div className="stat-label">AVAILABILITY</div>
+              <div className="stat-number">ALWAYS ON</div>
+              <div className="stat-label">24/7 Rapid Response</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">100%</div>
-              <div className="stat-label">SIA LICENSED SECURITY OFFICERS</div>
+              <div className="stat-number">LICENSED</div>
+              <div className="stat-label">SIA Licensed Subcontractor</div>
             </div>
           </div>
         </div>
