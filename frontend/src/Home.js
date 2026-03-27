@@ -163,7 +163,7 @@ function Home() {
               <div className="stat-label">Operations Nationwide</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">EXCELLENCE</div>
+              <div className="stat-number">100%</div>
               <div className="stat-label">Client Satisfaction Guaranteed</div>
             </div>
             <div className="stat-card">
