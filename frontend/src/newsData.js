@@ -58,6 +58,31 @@ const newsData = [
             "By blending cutting-edge optical technology with the expertise of our licensed personnel, Observant Security provides a comprehensive shield for renewable energy infrastructure, ensuring uninterrupted power generation and long-term asset protection for our clients."
         ],
         isNewsletter: false
+    },
+    {
+        id: 5,
+        title: "The Human Element: Why Manned Guarding Remains Essential in 2026",
+        date: "March 29, 2026",
+        summary: "In an era of AI and remote surveillance, the physical presence of a trained professional provides a level of security and adaptability that technology alone cannot match.",
+        image: "/original/man guarding.jpeg",
+        content: [
+            "Technology has transformed the security industry, providing us with tools that were unimaginable even a decade ago. From AI-driven analytics to 4K thermal imaging, the capabilities for remote monitoring are vast. However, at Observant Security, we know that these tools are most effective when they empower, rather than replace, the human element.",
+            "Our recent deployments across UK construction sites and renewable energy installations have highlighted the irreplaceable value of on-site security personnel. A physical guard provides an immediate, visible deterrent that a camera simply cannot. The psychological impact of seeing a professional, uniformed officer patrolling a site perimeter is often enough to stop an opportunistic intruder before they even attempt a breach.",
+            "Beyond deterrence, human guards offer real-time adaptability. During a patrol at a remote solar farm, one of our officers identified a subtle breach in a perimeter fence that a sensor had missed due to adverse weather. Their ability to immediately investigate, secure the area, and coordinate a response demonstrates the 'boots on the ground' advantage.",
+            "Furthermore, guards serve as brand ambassadors. On construction sites, they manage complex access control, verifying credentials and ensuring health and safety compliance for dozens of contractors. This requires a level of communication and critical thinking that remains uniquely human.",
+            "At Observant Security, we combine the best of both worlds. Our SIA-licensed guards use the latest mobile technology to log their patrols and receive real-time alerts from our monitoring center. This synergy ensures that our clients receive the most robust, responsive, and professional protection available in the UK today."
+        ],
+        gallery: [
+            "/original/man patrolling.jpeg",
+            "/original/man patrolling 2.jpeg",
+            "/original/man patrolling 3.jpeg",
+            "/original/real img.jpeg",
+            "/original/real img 2.jpeg",
+            "/original/real img 3.jpeg",
+            "/original/site security.jpeg",
+            "/original/site security 2.jpeg"
+        ],
+        isNewsletter: false
     }
 ];
 

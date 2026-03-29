@@ -33,6 +33,16 @@ const News = () => {
                             ))}
                         </div>
 
+                        {item.gallery && (
+                            <div className="news-gallery">
+                                {item.gallery.map((img, index) => (
+                                    <div key={index} className="gallery-item">
+                                        <img src={img} alt={`Gallery ${index}`} />
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
                         <footer className="back-to-news">
                             <Link to="/news">
                                 <i className="fas fa-arrow-left"></i> Back to Blog & Insights
