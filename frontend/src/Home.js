@@ -124,28 +124,28 @@ function Home() {
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/Pages%20Images/Rapid_response.png" alt="Complimentary Tech Deployment" />
+                <img src="/Pages%20Images/Rapid_response.png" alt="Complimentary Tech Deployment" loading="lazy" decoding="async" />
               </div>
               <h3>Complimentary Tech Deployment</h3>
               <p>Ask about our Free 30-Day Portable Camera trial for new solar farm contracts.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/Pages%20Images/ExperiencedTeam.png" alt="Night-Vision Superiority" />
+                <img src="/Pages%20Images/ExperiencedTeam.png" alt="Night-Vision Superiority" loading="lazy" decoding="async" />
               </div>
               <h3>Night-Vision Superiority</h3>
               <p>Specialist optics for 24/7 perimeter monitoring in remote, unlit locations.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/Pages%20Images/tailored_Sol.png" alt="Body-Cam Accountability" />
+                <img src="/Pages%20Images/tailored_Sol.png" alt="Body-Cam Accountability" loading="lazy" decoding="async" />
               </div>
               <h3>Body-Cam Accountability</h3>
               <p>Transparent, recorded patrolling for maximum site security and legal protection.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/Pages%20Images/Competitive_pricing.png" alt="Active Visual Deterrence" />
+                <img src="/Pages%20Images/Competitive_pricing.png" alt="Active Visual Deterrence" loading="lazy" decoding="async" />
               </div>
               <h3>Active Visual Deterrence</h3>
               <p>High-intensity beacon systems to signal a high-security presence to potential trespassers.</p>
@@ -188,37 +188,37 @@ function Home() {
           <div className="industries-grid">
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Pages%20Images/Construction_icon_Home_page.png" alt="Construction" />
+                <img src="/Pages%20Images/Construction_icon_Home_page.png" alt="Construction" loading="lazy" decoding="async" />
               </div>
               <h3>Construction</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Pages%20Images/Corporate_icon_Home_page.png" alt="Corporate" />
+                <img src="/Pages%20Images/Corporate_icon_Home_page.png" alt="Corporate" loading="lazy" decoding="async" />
               </div>
               <h3>Corporate</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Pages%20Images/Retaild_icon_Home_page.png" alt="Retail" />
+                <img src="/Pages%20Images/Retaild_icon_Home_page.png" alt="Retail" loading="lazy" decoding="async" />
               </div>
               <h3>Retail</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Pages%20Images/Warehouse_icon_Home_page.png" alt="Warehouses" />
+                <img src="/Pages%20Images/Warehouse_icon_Home_page.png" alt="Warehouses" loading="lazy" decoding="async" />
               </div>
               <h3>Warehouses</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Pages%20Images/Event_icon_Home_page.png" alt="Events" />
+                <img src="/Pages%20Images/Event_icon_Home_page.png" alt="Events" loading="lazy" decoding="async" />
               </div>
               <h3>Events</h3>
             </div>
             <div className="industry-card">
               <div className="industry-icon">
-                <img src="/Services/24.solarfarms.png" alt="Solar Farms" />
+                <img src="/Services/24.solarfarms.png" alt="Solar Farms" loading="lazy" decoding="async" />
               </div>
               <h3>Solar Farms</h3>
             </div>
@@ -238,28 +238,28 @@ function Home() {
               {[...Array(2)].map((_, i) => (
                 <React.Fragment key={i}>
                   <a href="https://www.chas.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-                    <img src="/license images/contracters_logo_1.png" alt="CHAS Contractor" />
+                    <img src="/license images/contracters_logo_1.png" alt="CHAS Contractor" loading="lazy" decoding="async" />
                   </a>
                   <a href="https://www.alcumus.com/safecontractor" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-                    <img src="/license images/contracters_logo_2.png" alt="SafeContractor" />
+                    <img src="/license images/contracters_logo_2.png" alt="SafeContractor" loading="lazy" decoding="async" />
                   </a>
                   <a href="https://www.constructionline.co.uk/" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-                    <img src="/license images/contracters_logo_3.png" alt="Constructionline" />
+                    <img src="/license images/contracters_logo_3.png" alt="Constructionline" loading="lazy" decoding="async" />
                   </a>
                   <a href="https://www.gov.uk/government/organisations/security-industry-authority" target="_blank" rel="noopener noreferrer" className="contractor-logo">
-                    <img src="/license images/contracters_logo_4.png" alt="SIA Approved Contractor" />
+                    <img src="/license images/contracters_logo_4.png" alt="SIA Approved Contractor" loading="lazy" decoding="async" />
                   </a>
                   <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/license images/contracters_logo_5.png" alt="Accreditation Logo" />
+                    <img src="/license images/contracters_logo_5.png" alt="Accreditation Logo" loading="lazy" decoding="async" />
                   </div>
                   <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/license images/contracters_logo_6.png" alt="Accreditation Logo" />
+                    <img src="/license images/contracters_logo_6.png" alt="Accreditation Logo" loading="lazy" decoding="async" />
                   </div>
                   <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/license images/contracters_logo_7.png" alt="Accreditation Logo" />
+                    <img src="/license images/contracters_logo_7.png" alt="Accreditation Logo" loading="lazy" decoding="async" />
                   </div>
                   <div className="contractor-logo" style={{ pointerEvents: 'none' }}>
-                    <img src="/license images/contracters_logo_8.png" alt="Accreditation Logo" />
+                    <img src="/license images/contracters_logo_8.png" alt="Accreditation Logo" loading="lazy" decoding="async" />
                   </div>
                 </React.Fragment>
               ))}

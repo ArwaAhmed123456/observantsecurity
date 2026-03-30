@@ -27,7 +27,7 @@ const News = () => {
                         </header>
 
                         {item.image && (
-                            <img src={item.image} alt={item.title} className="news-detail-image" />
+                            <img src={item.image} alt={item.title} className="news-detail-image" loading="eager" decoding="async" />
                         )}
 
                         <div className="news-detail-content">
@@ -93,28 +93,6 @@ const News = () => {
         item.summary.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    return (
-        <div className="news-page">
-            <div className="news-hero">
-                <div className="hero-overlay"></div>
-                <div className="hero-content">
-                    <span className="section-tag">INSIGHTS & UPDATES</span>
-                    <h1>The Observant Blog</h1>
-                    <p>Expert perspectives on the UK security landscape, industry trends, and company news.</p>
-                    
-                    <div className="search-container">
-                        <input 
-                            type="text" 
-                            placeholder="Search articles..." 
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            className="news-search"
-                        />
-                        <i className="fas fa-search search-icon"></i>
-                    </div>
-                </div>
-            </div>
-
     // For the list view, separate the latest post as "Featured"
     const featuredPost = filteredNews.length > 0 ? filteredNews[0] : null;
     const remainingNews = filteredNews.length > 1 ? filteredNews.slice(1) : [];
@@ -128,7 +106,7 @@ const News = () => {
                     {featuredPost && !searchTerm && (
                         <article className="featured-post">
                             <Link to={`/news/${featuredPost.id}`} className="featured-image-link">
-                                <img src={featuredPost.image} alt={featuredPost.title} className="featured-image" />
+                                <img src={featuredPost.image} alt={featuredPost.title} className="featured-image" loading="eager" decoding="async" />
                             </Link>
                             <div className="post-meta">
                                 <span className="post-category">{featuredPost.isNewsletter ? "Newsletter" : "Security"}</span>
@@ -152,7 +130,7 @@ const News = () => {
                         {(searchTerm ? filteredNews : remainingNews).map((item) => (
                             <article key={item.id} className="list-post">
                                 <Link to={`/news/${item.id}`} className="list-image-link">
-                                    <img src={item.image} alt={item.title} className="list-image" />
+                                    <img src={item.image} alt={item.title} className="list-image" loading="lazy" decoding="async" />
                                 </Link>
                                 <div className="post-meta">
                                     <span className="post-category">{item.isNewsletter ? "Newsletter" : "Insights"}</span>

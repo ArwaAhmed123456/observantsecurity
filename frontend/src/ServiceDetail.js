@@ -76,7 +76,7 @@ function ServiceDetail() {
               <button onClick={() => navigate('/contact')} className="btn-primary-expert">Get Expert Advice</button>
             </div>
             <div className="why-image-expert">
-               <img src={process.env.PUBLIC_URL + service.image} alt={service.title} />
+               <img src={process.env.PUBLIC_URL + service.image} alt={service.title} loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -156,9 +156,9 @@ function ServiceDetail() {
               {detailedContent.gallery.map((item, idx) => (
                 <div key={idx} className="gallery-item-expert">
                   {item.type === 'image' ? (
-                    <img src={process.env.PUBLIC_URL + item.src} alt={item.alt} loading="lazy" />
+                    <img src={process.env.PUBLIC_URL + item.src} alt={item.alt} loading="lazy" decoding="async" />
                   ) : (
-                    <video controls muted preload="metadata">
+                    <video controls muted preload="none">
                       <source src={process.env.PUBLIC_URL + item.src} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
@@ -181,11 +181,11 @@ function ServiceDetail() {
           <div className="accreditation-marquee-expert">
             <div className="marquee-content-expert">
               {accreditationLogos.map((logo, idx) => (
-                <img key={idx} src={process.env.PUBLIC_URL + logo} alt="Accreditation" loading="lazy" />
+                <img key={idx} src={process.env.PUBLIC_URL + logo} alt="Accreditation" loading="lazy" decoding="async" />
               ))}
               {/* Duplicate for seamless loop */}
               {accreditationLogos.map((logo, idx) => (
-                <img key={`dup-${idx}`} src={process.env.PUBLIC_URL + logo} alt="Accreditation" loading="lazy" />
+                <img key={`dup-${idx}`} src={process.env.PUBLIC_URL + logo} alt="Accreditation" loading="lazy" decoding="async" />
               ))}
             </div>
           </div>
