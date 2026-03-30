@@ -67,7 +67,7 @@ const News = () => {
                                     <div key={post.id} className="news-card">
                                         <Link to={`/news/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                             <div className="card-image">
-                                                <img src={post.image} alt={post.title} />
+                                                <img src={post.image} alt={post.title} loading="lazy" decoding="async" />
                                                 <span className="card-category">Related</span>
                                             </div>
                                             <div className="card-body">
@@ -93,116 +93,58 @@ const News = () => {
         item.summary.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    // For the list view, separate the latest post as "Featured"
-    const featuredPost = filteredNews.length > 0 ? filteredNews[0] : null;
-    const remainingNews = filteredNews.length > 1 ? filteredNews.slice(1) : [];
-
-    const mostPopular = newsData.slice(0, 5); // Just for display
-
     return (
-        <div className="official-news-page">
-            <div className="blog-container">
-                <main className="blog-main">
-                    {featuredPost && !searchTerm && (
-                        <article className="featured-post-new">
-                            <Link to={`/news/${featuredPost.id}`} className="featured-image-wrapper">
-                                <img src={featuredPost.image} alt={featuredPost.title} className="featured-image-new" loading="eager" decoding="async" />
-                                <span className="featured-tag">FEATURED INSIGHT</span>
-                            </Link>
-                            <div className="post-header-new">
-                                <div className="post-meta-new">
-                                    <span className="post-category-new">{featuredPost.category || (featuredPost.isNewsletter ? "Newsletter" : "Security")}</span>
-                                    <span className="meta-dot"></span>
-                                    <span className="post-date-new">{featuredPost.date}</span>
-                                    <span className="meta-dot"></span>
-                                    <span className="read-time-new">6 MIN READ</span>
-                                </div>
-                                <h2 className="featured-title-new">
-                                    <Link to={`/news/${featuredPost.id}`}>{featuredPost.title}</Link>
-                                </h2>
-                            </div>
-                            <p className="post-excerpt-new"><span className="drop-cap">{featuredPost.summary.charAt(0)}</span>{featuredPost.summary.slice(1)}</p>
-                            <div className="post-actions-new">
-                                <Link to={`/news/${featuredPost.id}`} className="read-more-link">Continue Reading <i className="fas fa-long-arrow-alt-right"></i></Link>
-                                <div className="social-placeholders">
-                                    <i className="far fa-bookmark"></i>
-                                    <i className="far fa-share-square"></i>
-                                </div>
-                            </div>
-                        </article>
-                    )}
+        <div className="news-page">
+            <div className="news-hero">
+                <div className="hero-overlay"></div>
+                <div className="hero-content">
+                    <span className="section-tag">INSIGHTS & UPDATES</span>
+                    <h1>The Observant Blog</h1>
+                    <p>Expert perspectives on the UK security landscape, industry trends, and company news.</p>
+                    
+                    <div className="search-container">
+                        <input 
+                            type="text" 
+                            placeholder="Search articles..." 
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="news-search"
+                        />
+                        <i className="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+            </div>
 
-                    <div className="article-list-new">
-                        {(searchTerm ? filteredNews : remainingNews).map((item) => (
-                            <article key={item.id} className="list-post-new">
-                                <div className="list-post-content-new">
-                                    <div className="post-meta-new">
-                                        <span className="post-category-new">{item.category || "Insights"}</span>
-                                        <span className="meta-dot"></span>
-                                        <span className="post-date-new">{item.date}</span>
+            <div className="news-container">
+                <div className="news-grid">
+                    {filteredNews.map((item) => (
+                        <div key={item.id} className="news-card">
+                            <Link to={`/news/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                <div className="card-image">
+                                    <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
+                                    <span className={`card-category ${item.isNewsletter ? 'newsletter' : ''}`}>
+                                        {item.isNewsletter ? "Newsletter" : "Security"}
+                                    </span>
+                                </div>
+                                <div className="card-body">
+                                    <span className="card-date">{item.date}</span>
+                                    <h3>{item.title}</h3>
+                                    <p>{item.summary}</p>
+                                    <div className="read-more-btn">
+                                        Read More <i className="fas fa-arrow-right"></i>
                                     </div>
-                                    <h3 className="list-title-new">
-                                        <Link to={`/news/${item.id}`}>{item.title}</Link>
-                                    </h3>
-                                    <p className="post-excerpt-new">{item.summary}</p>
-                                    <Link to={`/news/${item.id}`} className="read-more-link">Full Story <i className="fas fa-long-arrow-alt-right"></i></Link>
                                 </div>
-                                <Link to={`/news/${item.id}`} className="list-image-wrapper">
-                                    <img src={item.image} alt={item.title} className="list-image-new" loading="lazy" decoding="async" />
-                                </Link>
-                            </article>
-                        ))}
-                    </div>
-
-                    {filteredNews.length === 0 && (
-                        <div className="no-results">
-                            <h3>No articles found for "{searchTerm}"</h3>
-                            <button onClick={() => setSearchTerm('')} className="reset-btn">View All articles</button>
+                            </Link>
                         </div>
-                    )}
-                </main>
+                    ))}
+                </div>
 
-                <aside className="blog-sidebar">
-                    <div className="sidebar-section search-sidebar">
-                        <h3>Search</h3>
-                        <div className="search-box">
-                            <input 
-                                type="text" 
-                                placeholder="Search articles..." 
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                            />
-                            <i className="fas fa-search"></i>
-                        </div>
+                {filteredNews.length === 0 && (
+                    <div className="no-results">
+                        <h3>No articles found for "{searchTerm}"</h3>
+                        <button onClick={() => setSearchTerm('')} className="reset-btn">View All articles</button>
                     </div>
-
-                    <div className="sidebar-section popular-posts">
-                        <h3>Most Popular</h3>
-                        <ul className="popular-list">
-                            {mostPopular.map((post, idx) => (
-                                <li key={post.id}>
-                                    <span className="popular-number">0{idx + 1}</span>
-                                    <Link to={`/news/${post.id}`}>{post.title}</Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div className="sidebar-section about-sidebar">
-                        <h3>About the Blog</h3>
-                        <p>The Observant Insight is a daily security and safety site for UK businesses. We cover everything from tactical guarding to AI surveillance, and we strive to provide authentic, expert-led guidance.</p>
-                        <Link to="/about-us" className="read-more-about">Read More</Link>
-                    </div>
-
-                    <div className="sidebar-section newsletter-sidebar">
-                        <h3>Newsletter</h3>
-                        <p>Subscribe to our monthly security digest.</p>
-                        <form className="sidebar-newsletter" onSubmit={(e) => e.preventDefault()}>
-                            <input type="email" placeholder="Your email address" />
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                </aside>
+                )}
             </div>
         </div>
     );
