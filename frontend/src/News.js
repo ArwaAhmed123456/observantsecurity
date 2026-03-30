@@ -15,12 +15,15 @@ const News = () => {
             <div className="news-page detail-view">
                 <div className="news-container">
                     <article className="news-detail-wrapper">
-                        <header className="news-detail-meta">
-                            <span className="news-category">
-                                {item.isNewsletter ? "QUARTERLY NEWSLETTER" : "BLOG ARTICLE"}
-                            </span>
-                            <h1 className="news-detail-title">{item.title}</h1>
-                            <span className="news-detail-date">Published on {item.date}</span>
+                        <header className="news-detail-meta-official">
+                            <div className="post-meta">
+                                <span className="post-category">{item.category || (item.isNewsletter ? "Newsletter" : "Security")}</span>
+                                <span className="meta-separator">●</span>
+                                <span className="post-date">{item.date}</span>
+                                <span className="meta-separator">●</span>
+                                <span className="post-author">Observant Team</span>
+                            </div>
+                            <h1 className="news-detail-title-official">{item.title}</h1>
                         </header>
 
                         {item.image && (
@@ -34,9 +37,9 @@ const News = () => {
                         </div>
 
                         {item.gallery && (
-                            <div className="news-gallery">
+                            <div className="news-gallery-official">
                                 {item.gallery.map((img, index) => (
-                                    <div key={index} className="gallery-item">
+                                    <div key={index} className="gallery-item-official">
                                         <img src={img} alt={`Gallery ${index}`} />
                                     </div>
                                 ))}
@@ -112,50 +115,114 @@ const News = () => {
                 </div>
             </div>
 
-            <div className="news-container">
-                {filteredNews.length > 0 ? (
-                    <div className="news-grid">
-                        {filteredNews.map((item) => (
-                            <div key={item.id} className="news-card">
-                                <Link to={`/news/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <div className="card-image">
-                                        <img src={item.image} alt={item.title} />
-                                        <span className="card-category">Blog</span>
-                                    </div>
-                                    <div className="card-body">
-                                        <span className="card-date">{item.date}</span>
-                                        <h3>{item.title}</h3>
-                                        <p>{item.summary}</p>
-                                        <div className="read-more-btn">
-                                            Read Article <i className="fas fa-arrow-right"></i>
-                                        </div>
-                                    </div>
-                                </Link>
+    // For the list view, separate the latest post as "Featured"
+    const featuredPost = filteredNews.length > 0 ? filteredNews[0] : null;
+    const remainingNews = filteredNews.length > 1 ? filteredNews.slice(1) : [];
+
+    const mostPopular = newsData.slice(0, 5); // Just for display
+
+    return (
+        <div className="official-news-page">
+            <div className="blog-container">
+                <main className="blog-main">
+                    {featuredPost && !searchTerm && (
+                        <article className="featured-post">
+                            <Link to={`/news/${featuredPost.id}`} className="featured-image-link">
+                                <img src={featuredPost.image} alt={featuredPost.title} className="featured-image" />
+                            </Link>
+                            <div className="post-meta">
+                                <span className="post-category">{featuredPost.isNewsletter ? "Newsletter" : "Security"}</span>
+                                <span className="meta-separator">●</span>
+                                <span className="post-date">{featuredPost.date}</span>
+                                <span className="meta-separator">●</span>
+                                <span className="post-author">Observant Team</span>
                             </div>
+                            <h2 className="featured-title">
+                                <Link to={`/news/${featuredPost.id}`}>{featuredPost.title}</Link>
+                            </h2>
+                            <p className="post-excerpt">{featuredPost.summary}</p>
+                            <Link to={`/news/${featuredPost.id}`} className="continue-reading">Continue Reading</Link>
+                            <div className="post-footer">
+                                <span className="comment-count">0 COMMENTS</span>
+                            </div>
+                        </article>
+                    )}
+
+                    <div className="article-list">
+                        {(searchTerm ? filteredNews : remainingNews).map((item) => (
+                            <article key={item.id} className="list-post">
+                                <Link to={`/news/${item.id}`} className="list-image-link">
+                                    <img src={item.image} alt={item.title} className="list-image" />
+                                </Link>
+                                <div className="post-meta">
+                                    <span className="post-category">{item.isNewsletter ? "Newsletter" : "Insights"}</span>
+                                    <span className="meta-separator">●</span>
+                                    <span className="post-date">{item.date}</span>
+                                    <span className="meta-separator">●</span>
+                                    <span className="post-author">Observant Team</span>
+                                </div>
+                                <h3 className="list-title">
+                                    <Link to={`/news/${item.id}`}>{item.title}</Link>
+                                </h3>
+                                <p className="post-excerpt">{item.summary}</p>
+                                <Link to={`/news/${item.id}`} className="continue-reading">Continue Reading</Link>
+                                <div className="post-footer">
+                                    <span className="comment-count">0 COMMENTS</span>
+                                </div>
+                            </article>
                         ))}
                     </div>
-                ) : (
-                    <div className="no-results">
-                        <i className="fas fa-search"></i>
-                        <h3>No articles found</h3>
-                        <p>Try adjusting your search terms to find what you're looking for.</p>
-                        <button onClick={() => setSearchTerm('')} className="reset-btn">View All Articles</button>
-                    </div>
-                )}
-            </div>
 
-            <section className="newsletter-section">
-                <div className="newsletter-container">
-                    <div className="newsletter-text">
-                        <h2>Stay Informed</h2>
-                        <p>Subscribe to our monthly blog digest for the latest security insights and UK industry updates.</p>
+                    {filteredNews.length === 0 && (
+                        <div className="no-results">
+                            <h3>No articles found for "{searchTerm}"</h3>
+                            <button onClick={() => setSearchTerm('')} className="reset-btn">View All articles</button>
+                        </div>
+                    )}
+                </main>
+
+                <aside className="blog-sidebar">
+                    <div className="sidebar-section search-sidebar">
+                        <h3>Search</h3>
+                        <div className="search-box">
+                            <input 
+                                type="text" 
+                                placeholder="Search articles..." 
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                            <i className="fas fa-search"></i>
+                        </div>
                     </div>
-                    <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-                        <input type="email" placeholder="Enter your email" required />
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </section>
+
+                    <div className="sidebar-section popular-posts">
+                        <h3>Most Popular</h3>
+                        <ul className="popular-list">
+                            {mostPopular.map((post, idx) => (
+                                <li key={post.id}>
+                                    <span className="popular-number">0{idx + 1}</span>
+                                    <Link to={`/news/${post.id}`}>{post.title}</Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="sidebar-section about-sidebar">
+                        <h3>About the Blog</h3>
+                        <p>The Observant Insight is a daily security and safety site for UK businesses. We cover everything from tactical guarding to AI surveillance, and we strive to provide authentic, expert-led guidance.</p>
+                        <Link to="/about-us" className="read-more-about">Read More</Link>
+                    </div>
+
+                    <div className="sidebar-section newsletter-sidebar">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our monthly security digest.</p>
+                        <form className="sidebar-newsletter" onSubmit={(e) => e.preventDefault()}>
+                            <input type="email" placeholder="Your email address" />
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
         </div>
     );
 };

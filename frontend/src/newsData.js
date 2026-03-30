@@ -5,6 +5,7 @@ const newsData = [
         date: "March 24, 2026",
         summary: "Discover how our guards integrate rigorous fire safety checks with standard warehouse protection to prevent devastating losses.",
         image: "/original/fire_Extinguisher.jpeg",
+        category: "Fire Safety",
         content: [
             "At Observant Security, we believe comprehensive protection goes beyond just deterring theft. Fire safety is an equally critical component of our warehouse security services, especially given the high density of inventory often stored in these environments.",
             "Our licensed security officers undergo specialised training to identify potential fire hazards that are often overlooked. This includes monitoring high-risk electrical zones, ensuring fire extinguishers are not only present but fully accessible and correctly pressurised, and verifying that all emergency exits are completely clear of obstructions during every routine patrol.",
@@ -20,6 +21,7 @@ const newsData = [
         date: "March 10, 2026",
         summary: "Exploring the importance of strict access control and 24/7 manned guarding on active development sites.",
         image: "/original/original_site_security_image.jpeg",
+        category: "Strategy",
         content: [
             "Construction sites are notoriously difficult to secure due to their constantly changing layouts and the high value of machinery and raw materials left overnight. Recent industry data shows a sharp increase in plant theft, making robust security more critical than ever.",
             "Our latest strategies emphasize a multi-layered approach to defense. This starts with strict Site Access Control during working hours, employing professional SIA-licensed guards to manage entry points and verify the credentials of every individual entering the site.",
@@ -35,6 +37,7 @@ const newsData = [
         date: "February 28, 2026",
         summary: "How Observant Security combats the rising threat of copper theft in isolated renewable energy installations.",
         image: "/original/original_solar_security_image.jpeg",
+        category: "Solar Tech",
         content: [
             "As the UK accelerates its transition to renewable energy, remote solar farms have become increasingly prevalent. However, their isolated locations make them highly attractive targets for organised crime groups specializing in the theft of high-value copper cabling and solar panels.",
             "Observant Security has been at the forefront of developing specialized defense mechanisms tailored specifically for these rural environments. We recognize that standard security measures are often insufficient for sites that may be miles from the nearest town.",
@@ -56,6 +59,7 @@ const newsData = [
         date: "February 15, 2026",
         summary: "Exploring our specialist optics and rapid response capabilities for total situational awareness.",
         image: "/original/original_solar_security_image_1.jpeg",
+        category: "Solar Tech",
         content: [
             "Continuing our exploration of solar farm security, we turn our focus to the advanced technology that empowers our SIA-licensed security teams. In isolated rural settings, technology acts as an essential force multiplier.",
             "Our standard deployment for solar farms includes night-vision superiority and high-resolution thermal optics. These systems can detect the heat signatures of intruders from hundreds of meters away, even in total darkness or adverse weather conditions like heavy fog.",
@@ -76,7 +80,8 @@ const newsData = [
         title: "The Human Element: Why Manned Guarding Remains Essential in 2026",
         date: "March 29, 2026",
         summary: "In an era of AI and remote surveillance, the physical presence of a trained professional provides a level of security and adaptability that technology alone cannot match.",
-        image: "/original/man guarding.jpeg",
+        image: "/original/man guarding 2.jpeg",
+        category: "Insights",
         content: [
             "Technology has transformed the security industry, providing us with tools that were unimaginable even a decade ago. From AI-driven analytics to 4K thermal imaging, the capabilities for remote monitoring are vast. However, at Observant Security, we know that these tools are most effective when they empower, rather than replace, the human element.",
             "Our recent deployments across UK construction sites and renewable energy installations have highlighted the irreplaceable value of on-site security personnel. A physical guard provides an immediate, visible deterrent that a camera simply cannot. The psychological impact of seeing a professional, uniformed officer patrolling a site perimeter is often enough to stop an opportunistic intruder before they even attempt a breach.",
@@ -101,7 +106,8 @@ const newsData = [
         title: "Revolutionizing Surveillance: Solar-Powered CCTV Technology",
         date: "March 30, 2026",
         summary: "Observant Security introduces next-generation solar-powered CCTV units, providing 24/7 high-definition surveillance for off-grid and remote locations.",
-        image: "/original/cctv_solar_tech.jpg",
+        image: "/original/camera security 2.jpeg",
+        category: "Innovation",
         content: [
             "We are proud to announce the latest addition to our security arsenal: advanced solar-powered CCTV technology. Designed specifically for the challenges of the UK's remote construction sites, rural farms, and expansive industrial zones, these units provide zero-emission, 24/7 protection without the need for traditional power infrastructure.",
             "Each unit is equipped with high-efficiency solar panels and industrial-grade battery storage, ensuring continuous operation even during the darkest winter months. This makes them an ideal solution for temporary sites or areas where trenching for power cables is either too costly or environmentally sensitive.",
