@@ -30,10 +30,24 @@ const News = () => {
                             <img src={item.image} alt={item.title} className="news-detail-image" loading="eager" decoding="async" />
                         )}
 
-                        <div className="news-detail-content">
-                            {item.content.map((p, i) => (
-                                <p key={i}>{p}</p>
-                            ))}
+                        <div className="news-detail-content newspaper-layout">
+                            {item.content.map((block, i) => {
+                                if (typeof block === 'string') {
+                                    return <p key={i}>{block}</p>;
+                                }
+                                if (block.type === 'text') {
+                                    return <p key={i}>{block.text}</p>;
+                                }
+                                if (block.type === 'image') {
+                                    return (
+                                        <div key={i} className={`content-image-wrapper align-${block.align || 'center'}`}>
+                                            <img src={block.src} alt={block.alt || "Article image"} loading="lazy" />
+                                            {block.caption && <span className="image-caption">{block.caption}</span>}
+                                        </div>
+                                    );
+                                }
+                                return null;
+                            })}
                         </div>
 
                         {item.gallery && (
