@@ -29,7 +29,7 @@ const servicesData = [
   },
   {
     title: "CCTV Security",
-    image: "/original/camera security.jpeg",
+    image: "/original/cctv_solar_tech.jpg",
     description: "24/7 Monitored surveillance systems with rapid intervention capabilities.",
     detailedContent: {
       intro: "Advanced visual surveillance and proactive remote monitoring for total property protection.",

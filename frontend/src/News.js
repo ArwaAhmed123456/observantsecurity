@@ -49,6 +49,36 @@ const News = () => {
                             </Link>
                         </footer>
                     </article>
+
+                    {/* Related Posts Section */}
+                    <section className="related-posts">
+                        <div className="section-header">
+                            <span className="section-tag">CONTINUE READING</span>
+                            <h2>Related Articles</h2>
+                        </div>
+                        <div className="news-grid">
+                            {newsData
+                                .filter(post => post.id !== item.id)
+                                .slice(0, 3)
+                                .map(post => (
+                                    <div key={post.id} className="news-card">
+                                        <Link to={`/news/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <div className="card-image">
+                                                <img src={post.image} alt={post.title} />
+                                                <span className="card-category">Related</span>
+                                            </div>
+                                            <div className="card-body">
+                                                <span className="card-date">{post.date}</span>
+                                                <h3>{post.title}</h3>
+                                                <div className="read-more-btn">
+                                                    Read More <i className="fas fa-arrow-right"></i>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                ))}
+                        </div>
+                    </section>
                 </div>
             </div>
         );

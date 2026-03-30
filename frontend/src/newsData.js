@@ -42,6 +42,12 @@ const newsData = [
             "Our guards are trained in rural navigation and survival, ensuring they can effectively patrol vast areas and respond quickly to any breach. This constant presence acts as a powerful deterrent, signaling to potential trespassers that the site is under professional protection.",
             "In this first part of our series, we focus on the fundamental perimeter defense strategies that form the core of our solar farm solutions. Stay tuned for our next update where we delve deeper into the technological innovations assisting our teams."
         ],
+        gallery: [
+            "/original/solar_1.jpeg",
+            "/original/solar_2.jpeg",
+            "/original/original_solar_security_image.jpeg",
+            "/original/original_solar_security_image_1.jpeg"
+        ],
         isNewsletter: false
     },
     {
@@ -56,6 +62,12 @@ const newsData = [
             "Once a potential threat is identified by our surveillance equipment, our 24/7 monitoring center immediately alerts our on-site Rapid Response Teams. These teams are equipped with all-terrain vehicles, allowing them to intercept intruders anywhere on the farm within minutes.",
             "This combination of early detection and swift human intervention is the most effective way to prevent copper theft and equipment damage. Our response protocols are designed to secure the site and coordinate with local law enforcement for potential apprehensions.",
             "By blending cutting-edge optical technology with the expertise of our licensed personnel, Observant Security provides a comprehensive shield for renewable energy infrastructure, ensuring uninterrupted power generation and long-term asset protection for our clients."
+        ],
+        gallery: [
+            "/original/original_solar_security_image.jpeg",
+            "/original/original_solar_security_image_1.jpeg",
+            "/original/solar_1.jpeg",
+            "/original/solar_2.jpeg"
         ],
         isNewsletter: false
     },
@@ -73,14 +85,14 @@ const newsData = [
             "At Observant Security, we combine the best of both worlds. Our SIA-licensed guards use the latest mobile technology to log their patrols and receive real-time alerts from our monitoring center. This synergy ensures that our clients receive the most robust, responsive, and professional protection available in the UK today."
         ],
         gallery: [
-            "/original/man patrolling.jpeg",
-            "/original/man patrolling 2.jpeg",
+            "/original/man guarding.jpeg",
+            "/original/man guarding 2.jpeg",
             "/original/man patrolling 3.jpeg",
             "/original/real img.jpeg",
-            "/original/real img 2.jpeg",
             "/original/real img 3.jpeg",
-            "/original/site security.jpeg",
-            "/original/site security 2.jpeg"
+            "/original/site security 2.jpeg",
+            "/original/original_site_security_image.jpeg",
+            "/original/original_site_security_image_1.jpeg"
         ],
         isNewsletter: false
     }
