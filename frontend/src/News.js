@@ -104,49 +104,52 @@ const News = () => {
             <div className="blog-container">
                 <main className="blog-main">
                     {featuredPost && !searchTerm && (
-                        <article className="featured-post">
-                            <Link to={`/news/${featuredPost.id}`} className="featured-image-link">
-                                <img src={featuredPost.image} alt={featuredPost.title} className="featured-image" loading="eager" decoding="async" />
+                        <article className="featured-post-new">
+                            <Link to={`/news/${featuredPost.id}`} className="featured-image-wrapper">
+                                <img src={featuredPost.image} alt={featuredPost.title} className="featured-image-new" loading="eager" decoding="async" />
+                                <span className="featured-tag">FEATURED INSIGHT</span>
                             </Link>
-                            <div className="post-meta">
-                                <span className="post-category">{featuredPost.isNewsletter ? "Newsletter" : "Security"}</span>
-                                <span className="meta-separator">●</span>
-                                <span className="post-date">{featuredPost.date}</span>
-                                <span className="meta-separator">●</span>
-                                <span className="post-author">Observant Team</span>
+                            <div className="post-header-new">
+                                <div className="post-meta-new">
+                                    <span className="post-category-new">{featuredPost.category || (featuredPost.isNewsletter ? "Newsletter" : "Security")}</span>
+                                    <span className="meta-dot"></span>
+                                    <span className="post-date-new">{featuredPost.date}</span>
+                                    <span className="meta-dot"></span>
+                                    <span className="read-time-new">6 MIN READ</span>
+                                </div>
+                                <h2 className="featured-title-new">
+                                    <Link to={`/news/${featuredPost.id}`}>{featuredPost.title}</Link>
+                                </h2>
                             </div>
-                            <h2 className="featured-title">
-                                <Link to={`/news/${featuredPost.id}`}>{featuredPost.title}</Link>
-                            </h2>
-                            <p className="post-excerpt">{featuredPost.summary}</p>
-                            <Link to={`/news/${featuredPost.id}`} className="continue-reading">Continue Reading</Link>
-                            <div className="post-footer">
-                                <span className="comment-count">0 COMMENTS</span>
+                            <p className="post-excerpt-new"><span className="drop-cap">{featuredPost.summary.charAt(0)}</span>{featuredPost.summary.slice(1)}</p>
+                            <div className="post-actions-new">
+                                <Link to={`/news/${featuredPost.id}`} className="read-more-link">Continue Reading <i className="fas fa-long-arrow-alt-right"></i></Link>
+                                <div className="social-placeholders">
+                                    <i className="far fa-bookmark"></i>
+                                    <i className="far fa-share-square"></i>
+                                </div>
                             </div>
                         </article>
                     )}
 
-                    <div className="article-list">
+                    <div className="article-list-new">
                         {(searchTerm ? filteredNews : remainingNews).map((item) => (
-                            <article key={item.id} className="list-post">
-                                <Link to={`/news/${item.id}`} className="list-image-link">
-                                    <img src={item.image} alt={item.title} className="list-image" loading="lazy" decoding="async" />
+                            <article key={item.id} className="list-post-new">
+                                <div className="list-post-content-new">
+                                    <div className="post-meta-new">
+                                        <span className="post-category-new">{item.category || "Insights"}</span>
+                                        <span className="meta-dot"></span>
+                                        <span className="post-date-new">{item.date}</span>
+                                    </div>
+                                    <h3 className="list-title-new">
+                                        <Link to={`/news/${item.id}`}>{item.title}</Link>
+                                    </h3>
+                                    <p className="post-excerpt-new">{item.summary}</p>
+                                    <Link to={`/news/${item.id}`} className="read-more-link">Full Story <i className="fas fa-long-arrow-alt-right"></i></Link>
+                                </div>
+                                <Link to={`/news/${item.id}`} className="list-image-wrapper">
+                                    <img src={item.image} alt={item.title} className="list-image-new" loading="lazy" decoding="async" />
                                 </Link>
-                                <div className="post-meta">
-                                    <span className="post-category">{item.isNewsletter ? "Newsletter" : "Insights"}</span>
-                                    <span className="meta-separator">●</span>
-                                    <span className="post-date">{item.date}</span>
-                                    <span className="meta-separator">●</span>
-                                    <span className="post-author">Observant Team</span>
-                                </div>
-                                <h3 className="list-title">
-                                    <Link to={`/news/${item.id}`}>{item.title}</Link>
-                                </h3>
-                                <p className="post-excerpt">{item.summary}</p>
-                                <Link to={`/news/${item.id}`} className="continue-reading">Continue Reading</Link>
-                                <div className="post-footer">
-                                    <span className="comment-count">0 COMMENTS</span>
-                                </div>
                             </article>
                         ))}
                     </div>
