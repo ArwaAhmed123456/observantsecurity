@@ -95,7 +95,7 @@ const News = () => {
 
     return (
         <div className="news-page">
-            <div className="news-hero">
+            <div className="news-hero" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Hero\ page/1.bg.png)` }}>
                 <div className="hero-overlay"></div>
                 <div className="hero-content">
                     <span className="section-tag">INSIGHTS & UPDATES</span>

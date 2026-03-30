@@ -14,13 +14,15 @@
 .news-hero {
     position: relative;
     height: 450px;
-    background: url('/Hero page/1.bg.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     margin-bottom: 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-overlay {
