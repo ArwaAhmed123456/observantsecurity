@@ -95,6 +95,21 @@ const newsData = [
             "/original/original_site_security_image_1.jpeg"
         ],
         isNewsletter: false
+    },
+    {
+        id: 6,
+        title: "Revolutionizing Surveillance: Solar-Powered CCTV Technology",
+        date: "March 30, 2026",
+        summary: "Observant Security introduces next-generation solar-powered CCTV units, providing 24/7 high-definition surveillance for off-grid and remote locations.",
+        image: "/original/cctv_solar_tech.jpg",
+        content: [
+            "We are proud to announce the latest addition to our security arsenal: advanced solar-powered CCTV technology. Designed specifically for the challenges of the UK's remote construction sites, rural farms, and expansive industrial zones, these units provide zero-emission, 24/7 protection without the need for traditional power infrastructure.",
+            "Each unit is equipped with high-efficiency solar panels and industrial-grade battery storage, ensuring continuous operation even during the darkest winter months. This makes them an ideal solution for temporary sites or areas where trenching for power cables is either too costly or environmentally sensitive.",
+            "Technologically, these towers are second to none. They features multi-camera arrays that provide 360-degree situational awareness, thermal imaging for low-light detection, and AI-powered analytics that can differentiate between human intruders and local wildlife to minimize false alarms.",
+            "The data is beamed in real-time to our SIA-licensed monitoring center, where our operators can issue live audio warnings and dispatch rapid response teams at the first sign of a breach. This proactive approach ensures that threats are neutralized before any damage occurs.",
+            "By integrating these sustainable, portable technology solutions with our expert manned guarding services, Observant Security continues to lead the way in providing comprehensive, state-of-the-art protection for businesses across the UK."
+        ],
+        isNewsletter: false
     }
 ];
 
