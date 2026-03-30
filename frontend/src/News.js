@@ -6,7 +6,9 @@ import './News.css';
 const News = () => {
     const { newsId } = useParams();
     const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('All');
 
+    // Detail View Logic
     if (newsId) {
         const item = newsData.find(n => n.id === parseInt(newsId));
         if (!item) return <div className="news-page"><div className="news-container"><h2>Article not found</h2></div></div>;
@@ -17,11 +19,11 @@ const News = () => {
                     <article className="news-detail-wrapper">
                         <header className="news-detail-meta-official">
                             <div className="post-meta">
-                                <span className="post-category">{item.category || (item.isNewsletter ? "Newsletter" : "Security")}</span>
+                                <span className="post-category">{item.category}</span>
                                 <span className="meta-separator">●</span>
                                 <span className="post-date">{item.date}</span>
                                 <span className="meta-separator">●</span>
-                                <span className="post-author">Observant Team</span>
+                                <span className="post-read-time">{item.readTime || "5 MIN READ"}</span>
                             </div>
                             <h1 className="news-detail-title-official">{item.title}</h1>
                         </header>
@@ -32,12 +34,8 @@ const News = () => {
 
                         <div className="news-detail-content newspaper-layout">
                             {item.content.map((block, i) => {
-                                if (typeof block === 'string') {
-                                    return <p key={i}>{block}</p>;
-                                }
-                                if (block.type === 'text') {
-                                    return <p key={i}>{block.text}</p>;
-                                }
+                                if (typeof block === 'string') return <p key={i}>{block}</p>;
+                                if (block.type === 'text') return <p key={i}>{block.text}</p>;
                                 if (block.type === 'image') {
                                     return (
                                         <div key={i} className={`content-image-wrapper align-${block.align || 'center'}`}>
@@ -61,104 +59,170 @@ const News = () => {
                         )}
 
                         <footer className="back-to-news">
-                            <Link to="/news">
-                                <i className="fas fa-arrow-left"></i> Back to Blog & Insights
+                            <div className="social-share">
+                                <span>SHARE THIS ARTICLE:</span>
+                                <div className="share-icons">
+                                    <i className="fab fa-facebook-f"></i>
+                                    <i className="fab fa-twitter"></i>
+                                    <i className="fab fa-linkedin-in"></i>
+                                </div>
+                            </div>
+                            <Link to="/news" className="back-link-btn">
+                                <i className="fas fa-arrow-left"></i> Back to Journal
                             </Link>
                         </footer>
                     </article>
-
-                    {/* Related Posts Section */}
-                    <section className="related-posts">
-                        <div className="section-header">
-                            <span className="section-tag">CONTINUE READING</span>
-                            <h2>Related Articles</h2>
-                        </div>
-                        <div className="news-grid">
-                            {newsData
-                                .filter(post => post.id !== item.id)
-                                .slice(0, 3)
-                                .map(post => (
-                                    <div key={post.id} className="news-card">
-                                        <Link to={`/news/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                            <div className="card-image">
-                                                <img src={post.image} alt={post.title} loading="lazy" decoding="async" />
-                                                <span className="card-category">Related</span>
-                                            </div>
-                                            <div className="card-body">
-                                                <span className="card-date">{post.date}</span>
-                                                <h3>{post.title}</h3>
-                                                <div className="read-more-btn">
-                                                    Read More <i className="fas fa-arrow-right"></i>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                    </div>
-                                ))}
-                        </div>
-                    </section>
                 </div>
             </div>
         );
     }
 
-    // Filter news based on search term
-    const filteredNews = newsData.filter(item => 
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.summary.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    // List View Logic
+    const featuredPost = newsData.find(item => item.isFeatured) || newsData[0];
+    const categories = ['All', ...new Set(newsData.map(item => item.category))];
+    
+    const filteredNews = newsData.filter(item => {
+        const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                             item.summary.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
 
     return (
-        <div className="news-page">
-            <div className="news-hero" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Hero\ page/1.bg.png)` }}>
-                <div className="hero-overlay"></div>
-                <div className="hero-content">
-                    <span className="section-tag">INSIGHTS & UPDATES</span>
-                    <h1>The Observant Blog</h1>
-                    <p>Expert perspectives on the UK security landscape, industry trends, and company news.</p>
+        <div className="news-page magazine-view">
+            {/* 1. Header & Search Section */}
+            <header className="journal-header">
+                <div className="journal-container">
+                    <span className="premium-tag">OBSERVANT INSIGHTS</span>
+                    <h1>The Daily Journal</h1>
+                    <p className="journal-subtitle">Expert perspectives on security, technology, and industry trends.</p>
                     
-                    <div className="search-container">
+                    <div className="magazine-search-bar">
+                        <i className="fas fa-search"></i>
                         <input 
                             type="text" 
-                            placeholder="Search articles..." 
+                            placeholder="Search articles, insights, and news..." 
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="news-search"
                         />
-                        <i className="fas fa-search search-icon"></i>
                     </div>
                 </div>
-            </div>
+            </header>
 
-            <div className="news-container">
-                <div className="news-grid">
-                    {filteredNews.map((item) => (
-                        <div key={item.id} className="news-card">
-                            <Link to={`/news/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                <div className="card-image">
-                                    <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
-                                    <span className={`card-category ${item.isNewsletter ? 'newsletter' : ''}`}>
-                                        {item.isNewsletter ? "Newsletter" : "Security"}
-                                    </span>
+            <div className="journal-container">
+                {/* 2. Featured Section */}
+                {!searchTerm && selectedCategory === 'All' && (
+                    <section className="featured-section">
+                        <Link to={`/news/${featuredPost.id}`} className="featured-card">
+                            <div className="featured-image">
+                                <img src={featuredPost.image} alt={featuredPost.title} />
+                                <span className="featured-badge">FEATURED ARTICLE</span>
+                            </div>
+                            <div className="featured-info">
+                                <span className="post-category">{featuredPost.category}</span>
+                                <h2>{featuredPost.title}</h2>
+                                <p>{featuredPost.summary}</p>
+                                <div className="post-meta-footer">
+                                    <span className="author">By Observant Team</span>
+                                    <span className="dot"></span>
+                                    <span className="read-time">{featuredPost.readTime || "5 MIN READ"}</span>
                                 </div>
-                                <div className="card-body">
-                                    <span className="card-date">{item.date}</span>
-                                    <h3>{item.title}</h3>
-                                    <p>{item.summary}</p>
-                                    <div className="read-more-btn">
-                                        Read More <i className="fas fa-arrow-right"></i>
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
-                    ))}
-                </div>
-
-                {filteredNews.length === 0 && (
-                    <div className="no-results">
-                        <h3>No articles found for "{searchTerm}"</h3>
-                        <button onClick={() => setSearchTerm('')} className="reset-btn">View All articles</button>
-                    </div>
+                                <div className="explore-btn">Read Article <i className="fas fa-arrow-right"></i></div>
+                            </div>
+                        </Link>
+                    </section>
                 )}
+
+                {/* 3. Categories Quick Select */}
+                <section className="categories-preview">
+                    <h2>Browse Categories</h2>
+                    <div className="category-scroll">
+                        {categories.map(cat => (
+                            <button 
+                                key={cat} 
+                                className={`category-tile ${selectedCategory === cat ? 'active' : ''}`}
+                                onClick={() => setSelectedCategory(cat)}
+                            >
+                                <span className="cat-name">{cat}</span>
+                                <span className="cat-count">
+                                    {cat === 'All' ? newsData.length : newsData.filter(i => i.category === cat).length}
+                                </span>
+                            </button>
+                        ))}
+                    </div>
+                </section>
+
+                <div className="journal-layout-grid">
+                    {/* 4. Main Journal List */}
+                    <main className="journal-main-list">
+                        <div className="section-header">
+                            <h2>Latest from the Journal</h2>
+                            {selectedCategory !== 'All' && <span className="active-filter">Filtering by: {selectedCategory}</span>}
+                        </div>
+                        
+                        <div className="journal-list-wrapper">
+                            {filteredNews.map(item => (
+                                <Link key={item.id} to={`/news/${item.id}`} className="journal-list-item">
+                                    <div className="item-image">
+                                        <img src={item.image} alt={item.title} loading="lazy" />
+                                    </div>
+                                    <div className="item-content">
+                                        <span className="item-category">{item.category}</span>
+                                        <h3>{item.title}</h3>
+                                        <p>{item.summary}</p>
+                                        <div className="item-meta">
+                                            <span>{item.date}</span>
+                                            <span className="dot"></span>
+                                            <span>{item.readTime || "5 MIN READ"}</span>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+
+                        {filteredNews.length === 0 && (
+                            <div className="no-results-premium">
+                                <i className="fas fa-search"></i>
+                                <h3>No matching articles found</h3>
+                                <p>Try adjusting your search or category filters.</p>
+                                <button onClick={() => {setSearchTerm(''); setSelectedCategory('All')}}>Clear All Filters</button>
+                            </div>
+                        )}
+                    </main>
+
+                    {/* 5. Progressive Sidebar */}
+                    <aside className="journal-sidebar">
+                        <div className="sidebar-widget newsletter-widget">
+                            <h3>Join our Community</h3>
+                            <p>Get the latest security insights delivered to your inbox weekly.</p>
+                            <div className="subscribe-box">
+                                <input type="email" placeholder="email@address.com" />
+                                <button>Join Now</button>
+                            </div>
+                            <div className="stat-row">
+                                <div className="stat"><span className="val">1,000+</span><span className="lbl">Members</span></div>
+                                <div className="avatars">
+                                    <img src="/Pages%20Images/Questions-pana.png" alt="user" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="sidebar-widget popular-widget">
+                            <h3>Popular Stories</h3>
+                            <div className="popular-list">
+                                {newsData.slice(0, 3).map(item => (
+                                    <Link key={item.id} to={`/news/${item.id}`} className="mini-item">
+                                        <div className="mini-img"><img src={item.image} alt={item.title} /></div>
+                                        <div className="mini-info">
+                                            <h4>{item.title}</h4>
+                                            <span className="mini-meta">{item.readTime || "5 MIN READ"}</span>
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </div>
     );
