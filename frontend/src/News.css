@@ -505,11 +505,13 @@
 }
 
 .content-image-wrapper img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    max-height: 400px;
     object-fit: contain; /* Do not crop original image */
     display: block;
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 /* Float Left (Vertical/Horizontal uncropped images) */
