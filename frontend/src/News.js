@@ -127,7 +127,7 @@ const News = () => {
                                 <p>{featuredPost.summary}</p>
                                 <div className="post-meta-footer">
                                     <span className="author">By Observant Team</span>
-                                    <span className="dot"></span>
+                                    <span className="meta-separator">●</span>
                                     <span className="read-time">{featuredPost.readTime || "5 MIN READ"}</span>
                                 </div>
                                 <div className="explore-btn">Read Article <i className="fas fa-arrow-right"></i></div>
@@ -172,7 +172,7 @@ const News = () => {
                                         <p>{item.summary}</p>
                                         <div className="item-meta">
                                             <span>{item.date}</span>
-                                            <span className="dot"></span>
+                                            <span className="meta-separator">●</span>
                                             <span>{item.readTime || "5 MIN READ"}</span>
                                         </div>
                                     </div>
