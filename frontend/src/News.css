@@ -601,6 +601,40 @@
     margin: 0 4px;
 }
 
+/* ============================================================
+   ARTICLE GALLERY UI
+   ============================================================ */
+
+.news-gallery-official {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.gallery-item-official {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 240px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.gallery-item-official img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item-official img:hover {
+    transform: scale(1.05);
+}
+
 .news-detail-title-official {
     font-family: 'DM Serif Display', serif;
     font-size: 3rem;
