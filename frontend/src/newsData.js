@@ -1,5 +1,26 @@
 const newsData = [
     {
+        id: 7,
+        title: "UK Infrastructure Under Threat: Combating Large-Scale Cable Theft",
+        date: "March 31, 2026",
+        readTime: "6 MIN READ",
+        isFeatured: true,
+        summary: "Recent incidents such as the theft of 1,700 metres of cable in Nottinghamshire highlight the urgent need for robust, proactive security across UK infrastructure sites.",
+        image: "/original/camera%20security%202.jpeg",
+        category: "Infrastructure Security",
+        content: [
+            { type: "text", text: "The UK's critical infrastructure is facing an escalating threat from organized criminal groups targeting high-value materials. A recent incident highlighted by the BBC reported an audacious attempt to steal over 1,700 metres of cable from beneath the A617 in Nottinghamshire. Thieves utilized specialized manhole lifting tools and stolen vehicles, demonstrating a concerning level of coordination and preparation." },
+            { type: "image", src: "/original/original_site_security_image.jpeg", align: "right", alt: "Site Security Setup", caption: "Securing wide-area infrastructure sites against organized criminal operations." },
+            { type: "text", text: "These thefts cause disruption that extends far beyond the immediate financial loss of the materials. Communities face power outages, road closures, and communication network failures, while businesses and local authorities bear the immense cost of emergency repairs and operational downtime." },
+            { type: "text", text: "At Observant Security, we recognize that traditional, reactive security measures are simply no longer sufficient to combat these sophisticated threats. A static lock or an unmonitored fence provides minimal resistance against criminals equipped with industrial tools." },
+            { type: "image", src: "/original/man%20patrolling%203.jpeg", align: "left", alt: "Manned Patrol", caption: "Our highly trained SIA-licensed officers conduct unpredictable, intelligence-led patrols." },
+            { type: "text", text: "Our approach integrates rapid-deployment technology with highly-trained personnel. For large-scale infrastructure projects, we deploy autonomous, solar-powered CCTV towers equipped with thermal imaging. These systems detect unauthorized approaches in total darkness, immediately alerting our 24/7 National Operations Centre before the perimeter is even breached." },
+            { type: "text", text: "Once a threat is verified, our SIA-licensed rapid response teams are dispatched. The physical presence of trained security officers remains the ultimate deterrent; their ability to secure a site, preserve evidence, and liaise directly with local police forces, as seen in the Nottinghamshire case, is invaluable." },
+            { type: "text", text: "Safeguarding the UK's infrastructure requires a proactive, multi-layered strategy. Contact Observant Security today to learn how our tailored deployment of cutting-edge technology and elite manned guarding can protect your most critical assets from organized theft." }
+        ],
+        isNewsletter: false
+    },
+    {
         id: 6,
         title: "Revolutionizing Surveillance: Solar-Powered CCTV Technology",
         date: "March 30, 2026",
