@@ -14,9 +14,8 @@ const News = () => {
         if (!item) return <div className="news-page"><div className="news-container"><h2>Article not found</h2></div></div>;
 
         return (
-            <div className="news-page detail-view">
-                <div className="news-container">
-                    <article className="news-detail-wrapper">
+            <div className="news-page detail-view journal-container">
+                <article className="news-detail-wrapper">
                         <header className="news-detail-meta-official">
                             <div className="post-meta">
                                 <span className="post-category">{item.category}</span>
@@ -58,7 +57,7 @@ const News = () => {
                             </div>
                         )}
 
-                        <footer className="back-to-news">
+                        <div className="back-to-news">
                             <div className="social-share">
                                 <span>SHARE THIS ARTICLE:</span>
                                 <div className="share-icons">
@@ -70,10 +69,9 @@ const News = () => {
                             <Link to="/news" className="back-link-btn">
                                 <i className="fas fa-arrow-left"></i> Back to Journal
                             </Link>
-                        </footer>
+                        </div>
                     </article>
                 </div>
-            </div>
         );
     }
 
@@ -98,7 +96,7 @@ const News = () => {
                     <p className="journal-subtitle">Expert perspectives on security, technology, and industry trends.</p>
                     
                     <div className="magazine-search-bar">
-                        <i className="fas fa-search"></i>
+                        <span className="search-icon"><i className="fas fa-search"></i></span>
                         <input 
                             type="text" 
                             placeholder="Search articles, insights, and news..." 
@@ -136,17 +134,14 @@ const News = () => {
                 {/* 3. Categories Quick Select */}
                 <section className="categories-preview">
                     <h2>Browse Categories</h2>
-                    <div className="category-scroll">
+                    <div className="category-menu">
                         {categories.map(cat => (
                             <button 
                                 key={cat} 
-                                className={`category-tile ${selectedCategory === cat ? 'active' : ''}`}
+                                className={`category-link ${selectedCategory === cat ? 'active' : ''}`}
                                 onClick={() => setSelectedCategory(cat)}
                             >
-                                <span className="cat-name">{cat}</span>
-                                <span className="cat-count">
-                                    {cat === 'All' ? newsData.length : newsData.filter(i => i.category === cat).length}
-                                </span>
+                                {cat}
                             </button>
                         ))}
                     </div>
@@ -200,9 +195,12 @@ const News = () => {
                                 <button>Join Now</button>
                             </div>
                             <div className="stat-row">
-                                <div className="stat"><span className="val">1,000+</span><span className="lbl">Members</span></div>
+                                <div className="stat">
+                                    <span className="val">NEW</span>
+                                    <span className="lbl">WEEKLY INSIGHTS</span>
+                                </div>
                                 <div className="avatars">
-                                    <img src="/Pages%20Images/Questions-pana.png" alt="user" />
+                                    <span className="avatar-placeholder">📩</span>
                                 </div>
                             </div>
                         </div>

@@ -10,7 +10,7 @@ const newsData = [
         category: "Innovation",
         content: [
             { type: "text", text: "We are proud to announce the latest addition to our security arsenal: advanced solar-powered CCTV technology. Designed specifically for the challenges of the UK's remote construction sites, rural farms, and expansive industrial zones, these units provide zero-emission, 24/7 protection without the need for traditional power infrastructure." },
-            { type: "image", src: "/original/camera%20security%202.jpeg", align: "full", alt: "Solar CCTV" },
+            { type: "image", src: "/original/camera%20security%202.jpeg", align: "right", alt: "Solar CCTV", caption: "Our latest solar-powered CCTV unit deployed on site." },
             { type: "text", text: "Each unit is equipped with high-efficiency solar panels and industrial-grade battery storage, ensuring continuous operation even during the darkest winter months. This makes them an ideal solution for temporary sites or areas where trenching for power cables is either too costly or environmentally sensitive." },
             { type: "text", text: "Technologically, these towers are second to none. They features multi-camera arrays that provide 360-degree situational awareness, thermal imaging for low-light detection, and AI-powered analytics that can differentiate between human intruders and local wildlife to minimize false alarms." },
             { type: "text", text: "The data is beamed in real-time to our SIA-licensed monitoring center, where our operators can issue live audio warnings and dispatch rapid response teams at the first sign of a breach. This proactive approach ensures that threats are neutralized before any damage occurs." },
@@ -29,10 +29,10 @@ const newsData = [
         category: "Insights",
         content: [
             { type: "text", text: "Technology has transformed the security industry, providing us with tools that were unimaginable even a decade ago. From AI-driven analytics to 4K thermal imaging, the capabilities for remote monitoring are vast. However, at Observant Security, we know that these tools are most effective when they empower, rather than replace, the human element." },
-            { type: "image", src: "/original/man%20guarding.jpeg", align: "right", alt: "Manned Guarding" },
+            { type: "image", src: "/original/man%20guarding.jpeg", align: "right", alt: "Manned Guarding", caption: "SIA-licensed guards providing immediate, visible deterrence." },
             { type: "text", text: "Our recent deployments across UK construction sites and renewable energy installations have highlighted the irreplaceable value of on-site security personnel. A physical guard provides an immediate, visible deterrent that a camera simply cannot. The psychological impact of seeing a professional, uniformed officer patrolling a site perimeter is often enough to stop an opportunistic intruder before they even attempt a breach." },
             { type: "text", text: "Beyond deterrence, human guards offer real-time adaptability. During a patrol at a remote solar farm, one of our officers identified a subtle breach in a perimeter fence that a sensor had missed due to adverse weather. Their ability to immediately investigate, secure the area, and coordinate a response demonstrates the 'boots on the ground' advantage." },
-            { type: "image", src: "/original/man%20patrolling%203.jpeg", align: "left", alt: "Patrol" },
+            { type: "image", src: "/original/man%20patrolling%203.jpeg", align: "left", alt: "Patrol", caption: "Active perimeter patrol and on-site hazard identification." },
             { type: "text", text: "Furthermore, guards serve as brand ambassadors. On construction sites, they manage complex access control, verifying credentials and ensuring health and safety compliance for dozens of contractors. This requires a level of communication and critical thinking that remains uniquely human." },
             { type: "text", text: "At Observant Security, we combine the best of both worlds. Our SIA-licensed guards use the latest mobile technology to log their patrols and receive real-time alerts from our monitoring center. This synergy ensures that our clients receive the most robust, responsive, and professional protection available in the UK today." }
         ],
@@ -56,7 +56,7 @@ const newsData = [
         content: [
             { type: "text", text: "At Observant Security, we believe comprehensive protection goes beyond just deterring theft. Fire safety is an equally critical component of our warehouse security services, especially given the high density of inventory often stored in these environments." },
             { type: "text", text: "Our licensed security officers undergo specialised training to identify potential fire hazards that are often overlooked. This includes monitoring high-risk electrical zones, ensuring fire extinguishers are not only present but fully accessible and correctly pressurised, and verifying that all emergency exits are completely clear of obstructions during every routine patrol." },
-            { type: "image", src: "/original/Warehouse.png", align: "right", alt: "Warehouse Security" },
+            { type: "image", src: "/original/real%20img.jpeg", align: "right", alt: "Warehouse Security", caption: "Comprehensive warehouse health and safety checks during patrol." },
             { type: "text", text: "By identifying these risks in their nascent stages, we significantly reduce the likelihood of devastating losses that could cripple a business. Our guards maintain detailed logs of these inspections, providing our clients with robust documentation for their own health and safety audits." },
             { type: "text", text: "Furthermore, our team works closely with local fire authorities to stay updated on the latest safety regulations and best practices. This proactive approach ensures our clients remain compliant with all current UK fire safety legislation." },
             { type: "text", text: "Contact our specialized warehouse security team today to learn how we can integrate comprehensive health and safety checks into your daily guarding routines, ensuring total peace of mind for your business and workforce." }
@@ -74,7 +74,7 @@ const newsData = [
         category: "Strategy",
         content: [
             { type: "text", text: "Construction sites are notoriously difficult to secure due to their constantly changing layouts and the high value of machinery and raw materials left overnight. Recent industry data shows a sharp increase in plant theft, making robust security more critical than ever." },
-            { type: "image", src: "/original/original_site_security_image_1.jpeg", align: "left", alt: "Construction Site" },
+            { type: "image", src: "/original/original_site_security_image_1.jpeg", align: "left", alt: "Construction Site", caption: "Strict access control and perimeter defense across all active development sites." },
             { type: "text", text: "Our latest strategies emphasize a multi-layered approach to defense. This starts with strict Site Access Control during working hours, employing professional SIA-licensed guards to manage entry points and verify the credentials of every individual entering the site." },
             { type: "text", text: "Out-of-hours, our focus shifts to robust 24/7 perimeter protection. We utilize high-visibility manned guarding, strategically positioned to provide maximum deterrence. This is complemented by rapid-response mobile patrols that conduct thorough, unpredictable sweeps of the entire site boundary." },
             { type: "text", text: "We also integrate advanced technology, such as wireless perimeter alarms and portable CCTV towers, which provide an extra layer of situational awareness for our guards on the ground." },
