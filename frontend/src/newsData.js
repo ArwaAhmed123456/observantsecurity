@@ -6,7 +6,7 @@ const newsData = [
         readTime: "6 MIN READ",
         isFeatured: true,
         summary: "Recent incidents such as the theft of 1,700 metres of cable in Nottinghamshire highlight the urgent need for robust, proactive security across UK infrastructure sites.",
-        image: "/original/camera%20security%202.jpeg",
+        image: "/original/uk_infrastructure_cable_theft.png",
         category: "Infrastructure Security",
         content: [
             { type: "text", text: "The UK's critical infrastructure is facing an escalating threat from organized criminal groups targeting high-value materials. As recently reported by <a href='https://www.bbc.co.uk/news/articles/cly2mkv60zzo' target='_blank' rel='noopener noreferrer' style='color: var(--mag-gold); text-decoration: underline;'>BBC News</a>, a highly audacious incident saw thieves rip over 1,700 metres of cable from beneath the A617 in Nottinghamshire. The perpetrators utilized specialized manhole lifting tools and stolen vehicles, demonstrating a concerning level of coordination and preparation that standard security measures simply cannot deter." },

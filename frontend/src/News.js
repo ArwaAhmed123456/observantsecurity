@@ -34,7 +34,7 @@ const News = () => {
                         <div className="news-detail-content newspaper-layout">
                             {item.content.map((block, i) => {
                                 if (typeof block === 'string') return <p key={i}>{block}</p>;
-                                if (block.type === 'text') return <p key={i}>{block.text}</p>;
+                                if (block.type === 'text') return <p key={i} dangerouslySetInnerHTML={{ __html: block.text }}></p>;
                                 if (block.type === 'image') {
                                     return (
                                         <div key={i} className={`content-image-wrapper align-${block.align || 'center'}`}>
